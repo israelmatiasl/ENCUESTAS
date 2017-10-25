@@ -21,7 +21,7 @@
             <div class="tab-content text-center">
                 <input type="hidden" name="valtotal" id="valtotal" value="1" />
                 <div class="tab-pane active" id="profile">
-                    <h3 id="quest"> Pregunta 1 </h3>
+                    <h3 id="quest">@ENCUESTA.WEB.Helpers.StringsBuilder.pregunta1</h3>
 
                     <hr />
                     <div class="tab-content text-center">
@@ -56,13 +56,20 @@
         $(document).ready(function () {
 
             var sTotal = "";
+            var recom = "";
             var quest = document.getElementById('quest');
             var count = 1;
             var section = 1;
             var subsection = 1;
+            var subsection1 = 1;
             var UNOrp1 = "", UNOrp2 = "", UNOrp3 = "";
             var DOSrp1 = "", DOSrp2 = "", DOSrp3 = "", DOSrp4 = "", DOSrp5 = "", DOSrp6 = "", DOSrp7 = "", DOSrp8 = "", DOSrp9 = "", DOSrp10 = "", DOSrp11 = "", DOSrp12 = "";
             var TRESrp1 = "", TRESrp2 = "", TRESrp3 = "";
+            var CUATROrp1 = "", CUATROrp2 = "", CUATROrp3 = "";
+            var CINCOrp1 = "", CINCOrp2 = "", CINCOrp3 = "", CINCOrp4 = "";
+            var SEISrp1 = "", SEISrp2 = "", SEISrp3 = "";
+            var SIETErp1 = "", SIETErp2 = "";
+            var OCHOrp1 = "", OCHOrp2 = "";
             
 
             $("#next").click(function () {
@@ -73,6 +80,7 @@
                     alert('Seleccione una opción para continuar'); return;
                 }
 
+                sTotal += valradio;
 
                 if (section == 1)
                 {
@@ -82,49 +90,58 @@
                     
                     if (UNOrp1 == "1")
                     {
-                        //SEGUNDA PREGUNTA
-                        quest.innerHTML = "Pregunta 2";
+                        //PREGUNTA 1 SI
+                        quest.innerHTML = "@ENCUESTA.WEB.Helpers.StringsBuilder.pregunta2";
                         count = 2;
                         if (UNOrp2 == "1")
                         {
-                            //TERCERA PREGUNTA
+                            //PREGUNTA 2 SI
                             quest.innerHTML = "Pregunta 3";
                             count = 3;
                             if (UNOrp3 == "1")
                             {
-                                //4TA PREGUNTA
+                                //PREGUNTA 3 SI
+                                //PASA PREGUNTA 4
                                 section = 2;
                                 quest.innerHTML = "Pregunta 4";
                                 count = 1;
-                                sTotal = UNOrp1 + UNOrp2 + UNOrp3;
                             }
                             else if (UNOrp3 == "0")
                             {
-                                //4TA PREGUNTA
+                                //PREGUNTA 3 NO
+                                //PASA PREGUNTA 4
                                 section = 2;
                                 quest.innerHTML = "Pregunta 4";
                                 count = 1;
-                                sTotal = UNOrp1 + UNOrp2 + UNOrp3;
+
+                                //RECOMENDACION
+                                
                             }
                         }
                         else if (UNOrp2 == "0")
                         {
-                            //3RA PREGUNTA
+                            //PREGUNTA 2 NO
+                            //PASA PREGUNTA 4
                             section = 2;
                             quest.innerHTML = "Pregunta 4";
                             count = 1;
-                            sTotal = UNOrp1 + UNOrp2;
+
+
+                            //RECOMENDACION
+                            
                         }
                     }
                     else if (UNOrp1 == "0") {
-                        //2DA PREGUNTA
+                        //PREGUNTA 1 NO
+                        //PASA PREGUNTA 4
                         section = 2;
                         quest.innerHTML = "Pregunta 4";
                         count = 1;
-                        sTotal = UNOrp1;
+
+                        //RECOMENDACION
                     }
                 }
-
+                
                 else if (section == 2)
                 {
                     if (count == 1) DOSrp1 = valradio;
@@ -142,52 +159,63 @@
 
                     if (DOSrp1 == "1")
                     {
+                        //PREGUNTA 4 SI
                         if (subsection == 1)
                         {
                             quest.innerHTML = "Pregunta 5";
                             count = 2;
                             if (DOSrp2 == "1")
                             {
+                                // PREGUNTA 5 SI
                                 quest.innerHTML = "Pregunta 6";
                                 count = 3;
 
                                 if (DOSrp3 == "1")
                                 {
+                                    //PREGUNTA 6 SI
                                     subsection = 2;
                                     quest.innerHTML = "Pregunta 7";
-                                    sTotal = sTotal + DOSrp1 + DOSrp2 + DOSrp3;
                                     count = 4;
                                 }
                                 else if (DOSrp3 == "0")
                                 {
+                                    //PREGUNTA 6 NO
                                     subsection = 2;
                                     quest.innerHTML = "Pregunta 7";
-                                    sTotal = sTotal + DOSrp1 + DOSrp2 + DOSrp3;
                                     count = 4;
+
+                                    //RECOMENDACION
                                 }
+                            }
+                            else if (DOSrp2 =="0")
+                            {
+                                //PREGUNTA 5 NO
+                                subsection = 2;
+                                //PASA PREGUNTA 7
+                                quest.innerHTML = "Pregunta 7";
+                                count = 4;
                             }
                         }
                         else if (subsection == 2)
                         {
                             if (DOSrp4 == "1")
                             {
-                                //PREGUNTA 7
+                                //PREGUNTA 7 SI
                                 quest.innerHTML = "Pregunta 8";
                                 count = 5;
                                 if (DOSrp5 == "1" && UNOrp1 == "1")
                                 {
+                                    //PREGUNTA 8 SI , PREGUNTA 1 SI
                                     quest.innerHTML = "Pregunta 9";
                                     count = 6;
                                 }
                                 else if (DOSrp5 == "0" && UNOrp1 == "1")
                                 {
+                                    //PREGUNTA 8 NO, PREGUNTA 1 SI
                                     quest.innerHTML = "Pregunta 9";
                                     count = 6;
-                                }
-                                else if ((DOSrp5 == "1" && UNOrp1 == "0") || (DOSrp5 == "0" && UNOrp1 == "0"))
-                                {
-                                    quest.innerHTML = "Pregunta 9";
-                                    count = 6;
+
+                                    //RECOMENDACION
                                 }
 
                                 if (DOSrp6 == "1")
@@ -197,42 +225,60 @@
                                     count = 7;
                                     if (DOSrp7 == "1")
                                     {
-                                        alert('PREGUNTA 10 SI');
+                                        //PREGUNTA 10 SI
                                         subsection = 3;
+                                        //PASA PREGUNTA 12 SECCION 3
+                                        quest.innerHTML = "Pregunta 12";
+                                        count = 9;
+
+                                        //RECOMENDACION
                                     }
                                     else if (DOSrp7 == "0")
                                     {
+                                        //PREGUNTA 10 NO
                                         quest.innerHTML = "Pregunta 11";
                                         count = 8;
                                         if (DOSrp8 == "1")
                                         {
+                                            //PREGUNTA 11 SI
                                             subsection = 3;
+                                            //PASA PREGUNTA 12 SECCION 3
                                             quest.innerHTML = "Pregunta 12";
                                             count = 9;
                                         }
                                         else if (DOSrp8 == "0")
                                         {
+                                            //PREGUNTA 11 NO
                                             subsection = 3;
+                                            //PASA PREGUNTA 12 SECCION 3
                                             quest.innerHTML = "Pregunta 12";
                                             count = 9;
+
+                                            //RECOMENDACION
                                         }
                                     }
                                 }
                                 else if (DOSrp6 == "0")
                                 {
                                     //PREGUNTA 9 NO
+                                    //PASA PREGUNTA 12 SECCION 3
                                     subsection = 3;
                                     quest.innerHTML = "Pregunta 12";
                                     count = 9;
+
+                                    //RECOMENDACION
                                 }
 
                             }
                             else if (DOSrp4 == "0")
                             {
-                                //PREGUNTA 7
+                                //PREGUNTA 7 NO
                                 subsection = 3;
+                                //PASA PREGUNTA 12 SECCION 3
                                 quest.innerHTML = "Pregunta 12";
                                 count = 9;
+
+                                //RECOMENDACION
                             }
                         }
                         else if (subsection == 3)
@@ -247,6 +293,7 @@
                                 {
                                     //PREGUNTA 13 SI
                                     subsection = 4;
+                                    //PASA PREGUNTA 14 SECCION 4
                                     quest.innerHTML = "Pregunta 14";
                                     count = 11;
                                 }
@@ -254,16 +301,22 @@
                                 {
                                     //PREGUNTA 13 NO
                                     subsection = 4;
+                                    //PASA PREGUNTA 14 SECCION 4
                                     quest.innerHTML = "Pregunta 14";
                                     count = 11;
+
+                                    //RECOMENDACION
                                 }
                             }
                             else if (DOSrp9 == "0")
                             {
                                 //PREGUNTA 12 NO
                                 subsection = 4;
+                                //PASA PREGUNTA 14 SECCION 4
                                 quest.innerHTML = "Pregunta 14";
                                 count = 11;
+
+                                //RECOMENDACION
                             }
                         }
                         else if (subsection == 4)
@@ -277,23 +330,33 @@
                                 {
                                     //PREGUNTA 15 SI
                                     section = 3;
+                                    subsection = 0;
                                     //PREGUNTA 16 SECCION 3
                                     count = 1;
+                                    quest.innerHTML = "Pregunta 16";
                                 }
                                 else if (DOSrp12 == "0")
                                 {
                                     //PREGUNTA 15 NO
                                     section = 3;
+                                    subsection = 0;
                                     count = 1;
                                     //PREGUNTA 16 SECCION 3
+                                    quest.innerHTML = "Pregunta 16";
+
+                                    //RECOMENDACION
                                 }
                             }
                             else if (DOSrp11 == "0")
                             {
                                 //PREGUNTA 14 NO
                                 section = 3;
+                                subsection = 0;
                                 count = 1;
                                 //PREGUNTA 16 SECCION 3
+                                quest.innerHTML = "Pregunta 16";
+
+                                //RECOMENDACION
                             }
                         }
                     }
@@ -301,30 +364,337 @@
                     {
                         //PREGUNTA 4 NO
                         section = 3;
+                        subsection = 0;
                         quest.innerHTML = "Pregunta 16";
                         //PREGUNTA 15 SECCION 3
                         count = 1;
+
+                        //RECOMENDACION
                     }
                 }
 
                 else if (section == 3)
                 {
                     if (count == 1) TRESrp1 = valradio;
+                    if (count == 2) TRESrp2 = valradio;
+                    if (count == 3) TRESrp3 = valradio;
 
                     if (TRESrp1 == "1")
                     {
-                        alert('pregunta 16 SI');
+                        //PREGUNTA 16 SI
+                        quest.innerHTML = "Pregunta 17";
+                        count = 2;
+                        if (TRESrp2 == "1")
+                        {
+                            //PREGUNTA 17 SI
+                            quest.innerHTML = "Pregunta 18";
+                            count = 3;
+                            if (TRESrp3 == "1")
+                            {
+                                //PREGUNTA 18 SI
+                                quest.innerHTML = "Pregunta 19";
+                                // PASA PREGUNTA 19 SECCION 5
+                                section = 4;
+                                count = 1;
+                            }
+                            else if (TRESrp3 === "0")
+                            {
+                                //PREGUNTA 18 NO
+                                quest.innerHTML = "Pregunta 19";
+                                section = 4;
+                                count = 1;
+
+                                //RECOMENDACION
+                            }
+                        }
+                        else if (TRESrp2 == "0")
+                        {
+                            //PREGUNTA 17 NO
+                            quest.innerHTML = "Pregunta 19";
+                            section = 4;
+                            count = 1;
+
+                            //RECOMENDACION
+                        }
+                    }
+                    else if (TRESrp1 == "0")
+                    {
+                        //PREGUNTA 16 NO - PASA SECCION 4
+                        quest.innerHTML = "Pregunta 19";
+                        section = 4;
+                        count = 1;
+
+                        //RECOMENDACION
                     }
                     
                 }
-                
 
+                else if (section == 4)
+                {
+                    if (count == 1) CUATROrp1 = valradio;
+                    if (count == 2) CUATROrp2 = valradio;
+                    if (count == 3) CUATROrp3 = valradio;
 
+                    if (CUATROrp1 == "1")
+                    {
+                        //PREGUNTA 19 SI
+                        quest.innerHTML = "Pregunta 20";
+                        count = 2;
+                        if (CUATROrp2 == "1")
+                        {
+                            //PREGUNTA 20 SI
+                            quest.innerHTML = "Pregunta 21";
+                            count = 3;
+                            if (CUATROrp3 == "1")
+                            {
+                                //PREGUNTA 21 SI
+                                //PASA PREGUNTA 22
+                                quest.innerHTML = "Pregunta 22";
+                                section = 5;
+                                count = 1;
+                            }
+                            else if (CUATROrp3 == "0")
+                            {
+                                //PREGUNTA 21 NO
+                                //PASA PREGUNTA 22
+                                quest.innerHTML = "Pregunta 22";
+                                section = 5;
+                                count = 1;
 
+                                //RECOMENDACION
+                            }
+                        }
+                        else if (CUATROrp2 == "0")
+                        {
+                            //PREGUNTA 20 NO
+                            //PASA PREGUNTA 22
+                            quest.innerHTML = "Pregunta 22";
+                            section = 5;
+                            count = 1;
 
+                            //RECOMENDACION
+                        }
+                    }
+                    else if (CUATROrp1 == "0")
+                    {
+                        //PREGUNTA 19 NO
+                        //PASA PREGUNTA 22
+                        quest.innerHTML = "Pregunta 22";
+                        section = 5;
+                        count = 1;
 
+                        //RECOMENDACION
+                    }
+                }
 
+                else if (section == 5)
+                {
+                    if (count == 1) CINCOrp1 = valradio;
+                    if (count == 2) CINCOrp2 = valradio;
+                    if (count == 3) CINCOrp3 = valradio;
+                    if (count == 4) CINCOrp4 = valradio;
 
+                    if (CINCOrp1 == "1")
+                    {
+                        //PREGUNTA 22 SI
+                        quest.innerHTML = "Pregunta 23";
+                        count = 2;
+                        if (CINCOrp2 == "1")
+                        {
+                            //PREGUNTA 23 SI
+                            //PASA PREGUNTA 26
+                            quest.innerHTML = "Pregunta 26";
+                            section = 6;
+                            count = 1;
+
+                            //RECOMENDACION
+                        }
+                        else if (CINCOrp2 == "0")
+                        {
+                            //PREGUNTA 23 NO
+                            quest.innerHTML = "Pregunta 24";
+                            count = 3;
+                            if (CINCOrp3 == "1")
+                            {
+                                //PREGUNTA 24 SI
+                                quest.innerHTML = "Pregunta 25";
+                                count = 4;
+                                if (CINCOrp4 == "1")
+                                {
+                                    //PREGUNTA 25 SI
+                                    //PASA PREGUNTA 26
+                                    quest.innerHTML = "Pregunta 26";
+                                    section = 6;
+                                    count = 1;
+                                }
+                                else if (CINCOrp4 == "0")
+                                {
+                                    //PREGUNTA 25 NO
+                                    //PASA PREGUNTA 26
+                                    quest.innerHTML = "Pregunta 26";
+                                    section = 6;
+                                    count = 1;
+
+                                    //RECOMENDACION
+                                }
+                            }
+                            else if (CINCOrp3 == "0")
+                            {
+                                //PREGUNTA 24 NO
+                                //PASA PREGUNTA 26
+                                quest.innerHTML = "Pregunta 26";
+                                section = 6;
+                                count = 1;
+
+                                //RECOMENDACION
+                            }
+                        }
+                    }
+                    else if (CINCOrp1 == "0")
+                    {
+                        //PREGUNTA 22 NO
+                        //PASA PREGUNTA 26
+                        quest.innerHTML = "Pregunta 26";
+                        section = 6;
+                        count = 1;
+
+                        //RECOMENDACION
+                    }
+                }
+
+                else if (section == 6)
+                {
+                    if (count == 1) SEISrp1 = valradio;
+                    if (count == 2) SEISrp2 = valradio;
+                    if (count == 3) SEISrp3 = valradio;
+
+                    if (SEISrp1 == "1")
+                    {
+                        //PREGUNTA 26 SI
+                        if (subsection1 == 1)
+                        {
+                            quest.innerHTML = "Pregunta 27";
+                            count = 2;
+                            if (SEISrp2 == "1") {
+                                //PREGUNTA 27 SI
+                                quest.innerHTML = "Pregunta 28";
+                                count = 3;
+                                subsection1 = 2
+                            }
+                            else if (SEISrp2 == "0") {
+                                //PREGUNTA 27 NO
+                                quest.innerHTML = "Pregunta 28";
+                                count = 3;
+                                subsection1 = 2;
+
+                                //RECOMENDACION
+                            }
+                        }
+                        else if (subsection1 == 2)
+                        {
+                            if (SEISrp3 == "1")
+                            {
+                                //PREGUNTA 28 SI
+                                //PASA PREGUNTA 29
+                                quest.innerHTML = "Pregunta 29";
+                                section = 7;
+                                count = 1;
+                            }
+                            else if (SEISrp3 == "0")
+                            {
+                                //PREGUNTA 28 NO
+                                //PASA PREGUNTA 29
+                                quest.innerHTML = "Pregunta 29";
+                                section = 7;
+                                count = 1;
+
+                                //RECOMENDACION
+                            }
+                        }
+                       
+                    }
+                    else if (SEISrp1 == "0")
+                    {
+                        //PREGUNTA 26 NO
+                        //PASA PREGUNTA 29
+                        quest.innerHTML = "Pregunta 29";
+                        section = 7;
+                        count = 1;
+
+                        //RECOMENDACION
+                    }
+                }
+
+                else if (section == 7)
+                {
+                    if (count == 1) SIETErp1 = valradio;
+                    if (count == 2) SIETErp2 = valradio;
+
+                    if (SIETErp1 == "1")
+                    {
+                        //PREGUNTA 29 SI
+                        quest.innerHTML = "Pregunta 30";
+                        count = 2;
+                        if (SIETErp2 == "1")
+                        {
+                            //PREGUNTA 30 SI
+                            //PASA A LA PREGUNTA 31
+                            quest.innerHTML = "Pregunta 31";
+                            section = 8;
+                            count = 1;
+                        }
+                        else if (SIETErp2 == "0")
+                        {
+                            // PREGUNTA 30 NO
+                            //PASA A LA PREGUNTA 31
+                            quest.innerHTML = "Pregunta 31";
+                            section = 8;
+                            count = 1;
+
+                            //RECOMENDACION
+                        }
+                    }
+                    else if (SIETErp1 == "0")
+                    {
+                        //PREGUNTA 29 NO
+                        //PASA A LA PREGUNTA 31
+                        quest.innerHTML = "Pregunta 31";
+                        section = 8;
+                        count = 1;
+
+                        //RECOMENDACIONES
+                    }
+                }
+
+                else if (section == 8)
+                {
+                    if (count == 1) OCHOrp1 = valradio;
+                    if (count == 2) OCHOrp2 = valradio;
+
+                    if (OCHOrp1 == "1")
+                    {
+                        //PREGUNTA 31 SI
+                        quest.innerHTML = "Pregunta 32";
+                        count = 2;
+                        if (OCHOrp2 == "1")
+                        {
+                            //PREGUNTA 32 SI
+                            alert('ACABO');
+                        }
+                        else if (OCHOrp2 == "0")
+                        {
+                            //PREGUNTA 32 NO
+                            alert('ACABO');
+                            //RECOMENDACIÓN
+                        }
+                    }
+                    else if (OCHOrp1 == "0")
+                    {
+                        //PREGUNTA 32 NO
+                        alert('ACABO');
+                        //RECOMENDACIÓN
+                    }
+                }
 
                 $("#valtotal").val(sTotal);
                 
@@ -333,17 +703,7 @@
                 cambiarEstado();
             });
         })
-
-
-
-
-
-
-
-
-
-
-
+        
         function cambiarEstado()
         {
             var elemento = $('#pregunta');
