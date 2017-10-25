@@ -56,10 +56,8 @@
         $(document).ready(function () {
 
             var sTotal = "";
-            var sWeb = "";
             var quest = document.getElementById('quest');
             var count = 1;
-            var count1 = 1;
             var section = 1;
             var subsection = 1;
             var UNOrp1 = "", UNOrp2 = "", UNOrp3 = "";
@@ -330,26 +328,9 @@
 
                 $("#valtotal").val(sTotal);
                 
-                //var valradio = $('input[name=optionsRadios]:checked').val();
-                //sParc = sParc + valradio;
-
-                //switch (sParc)
-                //{
-                //    case "1": sWeb = "YES"; sParc = sParc + sWeb; quest.innerHTML = "¿Sabe usted si su empresa vende sus productos a través de su página web?"; break;
-                //    case "1YES1": quest.innerHTML = "¿Sabe usted si su empresa tiene implementado un botón de pago en su página web?"; break;
-                //    case "1YES0": case "1YES11": case "1YES10": quest.innerHTML = "¿Sabe usted si los clientes de su empresa poseen dispositivos móviles (featured phones o smartphones)?"; break;
-                //    case "0": sWeb = "NO"; sParc = sParc + sWeb; quest.innerHTML = "¿Sabe usted si los clientes de su empresa poseen dispositivos móviles (featured phones o smartphones)?"; break;
-                //    case "0NO1": case "1YES01": case "1YES111": case "1YES101": quest.innerHTML = "¿Sabe usted si los clientes de su empresa envían constantemente SMS?"; break;
-                //    case "0NO11": case "1YES011": case "1YES1111": case "1YES1011": quest.innerHTML = "¿Sabe usted si su empresa tiene implementado un mecanismo de pago basado en SMS Billing?"; break;
-                //}
-
-                //sTotal = sParc;
-
-                //$("#valtotal").val(sParc);
+                
 
                 cambiarEstado();
-                //$("#valtotal").val(count);
-                //count++;
             });
         })
 
