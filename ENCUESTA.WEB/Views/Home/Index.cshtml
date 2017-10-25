@@ -1,31 +1,376 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div class="card card-nav-tabs">
+    <div class="header header-danger">
+        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+        <div class="nav-tabs-navigation">
+            <div class="nav-tabs-wrapper">
+                <ul class="nav nav-tabs" data-tabs="tabs">
+                    <li>
+                        <h2>PREGUNTA</h2>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="card-content">
+        <form method="post">
+            <div class="tab-content text-center">
+                <input type="hidden" name="valtotal" id="valtotal" value="1" />
+                <div class="tab-pane active" id="profile">
+                    <h3 id="quest"> Pregunta 1 </h3>
+
+                    <hr />
+                    <div class="tab-content text-center">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" id="pregunta" name="optionsRadios" value="1"><span class="circle"></span><span class="check"></span>
+                                SI
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" id="pregunta" name="optionsRadios" value="0"><span class="circle"></span><span class="check"></span>
+                                NO
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="tab-content">
+                        <button type="button" id="back" class="btn btn-danger pull-left" onclick="cambiarEstado()">ATRÁS</button>
+                        <button type="button" id="next" class="btn btn-danger pull-right">SIGUIENTE</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+@section Scripts
+{
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            var sTotal = "";
+            var sWeb = "";
+            var quest = document.getElementById('quest');
+            var count = 1;
+            var count1 = 1;
+            var section = 1;
+            var subsection = 1;
+            var UNOrp1 = "", UNOrp2 = "", UNOrp3 = "";
+            var DOSrp1 = "", DOSrp2 = "", DOSrp3 = "", DOSrp4 = "", DOSrp5 = "", DOSrp6 = "", DOSrp7 = "", DOSrp8 = "", DOSrp9 = "", DOSrp10 = "", DOSrp11 = "", DOSrp12 = "";
+            var TRESrp1 = "", TRESrp2 = "", TRESrp3 = "";
+            
+
+            $("#next").click(function () {
+                var valradio = $('input[name=optionsRadios]:checked').val();
+
+                if (valradio == undefined)
+                {
+                    alert('Seleccione una opción para continuar'); return;
+                }
+
+
+                if (section == 1)
+                {
+                    if (count == 1) UNOrp1 = valradio;
+                    else if (count == 2) UNOrp2 = valradio;
+                    else if (count == 3) UNOrp3 = valradio;
+                    
+                    if (UNOrp1 == "1")
+                    {
+                        //SEGUNDA PREGUNTA
+                        quest.innerHTML = "Pregunta 2";
+                        count = 2;
+                        if (UNOrp2 == "1")
+                        {
+                            //TERCERA PREGUNTA
+                            quest.innerHTML = "Pregunta 3";
+                            count = 3;
+                            if (UNOrp3 == "1")
+                            {
+                                //4TA PREGUNTA
+                                section = 2;
+                                quest.innerHTML = "Pregunta 4";
+                                count = 1;
+                                sTotal = UNOrp1 + UNOrp2 + UNOrp3;
+                            }
+                            else if (UNOrp3 == "0")
+                            {
+                                //4TA PREGUNTA
+                                section = 2;
+                                quest.innerHTML = "Pregunta 4";
+                                count = 1;
+                                sTotal = UNOrp1 + UNOrp2 + UNOrp3;
+                            }
+                        }
+                        else if (UNOrp2 == "0")
+                        {
+                            //3RA PREGUNTA
+                            section = 2;
+                            quest.innerHTML = "Pregunta 4";
+                            count = 1;
+                            sTotal = UNOrp1 + UNOrp2;
+                        }
+                    }
+                    else if (UNOrp1 == "0") {
+                        //2DA PREGUNTA
+                        section = 2;
+                        quest.innerHTML = "Pregunta 4";
+                        count = 1;
+                        sTotal = UNOrp1;
+                    }
+                }
+
+                else if (section == 2)
+                {
+                    if (count == 1) DOSrp1 = valradio;
+                    else if (count == 2) DOSrp2 = valradio;
+                    else if (count == 3) DOSrp3 = valradio;
+                    else if (count == 4) DOSrp4 = valradio;
+                    else if (count == 5) DOSrp5 = valradio;
+                    else if (count == 6) DOSrp6 = valradio;
+                    else if (count == 7) DOSrp7 = valradio;
+                    else if (count == 8) DOSrp8 = valradio;
+                    else if (count == 9) DOSrp9 = valradio;
+                    else if (count == 10) DOSrp10 = valradio;
+                    else if (count == 11) DOSrp11 = valradio;
+                    else if (count == 12) DOSrp12 = valradio;
+
+                    if (DOSrp1 == "1")
+                    {
+                        if (subsection == 1)
+                        {
+                            quest.innerHTML = "Pregunta 5";
+                            count = 2;
+                            if (DOSrp2 == "1")
+                            {
+                                quest.innerHTML = "Pregunta 6";
+                                count = 3;
+
+                                if (DOSrp3 == "1")
+                                {
+                                    subsection = 2;
+                                    quest.innerHTML = "Pregunta 7";
+                                    sTotal = sTotal + DOSrp1 + DOSrp2 + DOSrp3;
+                                    count = 4;
+                                }
+                                else if (DOSrp3 == "0")
+                                {
+                                    subsection = 2;
+                                    quest.innerHTML = "Pregunta 7";
+                                    sTotal = sTotal + DOSrp1 + DOSrp2 + DOSrp3;
+                                    count = 4;
+                                }
+                            }
+                        }
+                        else if (subsection == 2)
+                        {
+                            if (DOSrp4 == "1")
+                            {
+                                //PREGUNTA 7
+                                quest.innerHTML = "Pregunta 8";
+                                count = 5;
+                                if (DOSrp5 == "1" && UNOrp1 == "1")
+                                {
+                                    quest.innerHTML = "Pregunta 9";
+                                    count = 6;
+                                }
+                                else if (DOSrp5 == "0" && UNOrp1 == "1")
+                                {
+                                    quest.innerHTML = "Pregunta 9";
+                                    count = 6;
+                                }
+                                else if ((DOSrp5 == "1" && UNOrp1 == "0") || (DOSrp5 == "0" && UNOrp1 == "0"))
+                                {
+                                    quest.innerHTML = "Pregunta 9";
+                                    count = 6;
+                                }
+
+                                if (DOSrp6 == "1")
+                                {
+                                    //PREGUNTA 9 SI
+                                    quest.innerHTML = "Pregunta 10";
+                                    count = 7;
+                                    if (DOSrp7 == "1")
+                                    {
+                                        alert('PREGUNTA 10 SI');
+                                        subsection = 3;
+                                    }
+                                    else if (DOSrp7 == "0")
+                                    {
+                                        quest.innerHTML = "Pregunta 11";
+                                        count = 8;
+                                        if (DOSrp8 == "1")
+                                        {
+                                            subsection = 3;
+                                            quest.innerHTML = "Pregunta 12";
+                                            count = 9;
+                                        }
+                                        else if (DOSrp8 == "0")
+                                        {
+                                            subsection = 3;
+                                            quest.innerHTML = "Pregunta 12";
+                                            count = 9;
+                                        }
+                                    }
+                                }
+                                else if (DOSrp6 == "0")
+                                {
+                                    //PREGUNTA 9 NO
+                                    subsection = 3;
+                                    quest.innerHTML = "Pregunta 12";
+                                    count = 9;
+                                }
+
+                            }
+                            else if (DOSrp4 == "0")
+                            {
+                                //PREGUNTA 7
+                                subsection = 3;
+                                quest.innerHTML = "Pregunta 12";
+                                count = 9;
+                            }
+                        }
+                        else if (subsection == 3)
+                        {
+                            if (DOSrp9 == "1")
+                            {
+                                //PREGUNTA 12 SI
+                                quest.innerHTML = "Pregunta 13";
+                                count = 10;
+
+                                if (DOSrp10 == "1")
+                                {
+                                    //PREGUNTA 13 SI
+                                    subsection = 4;
+                                    quest.innerHTML = "Pregunta 14";
+                                    count = 11;
+                                }
+                                else if (DOSrp10 == "0")
+                                {
+                                    //PREGUNTA 13 NO
+                                    subsection = 4;
+                                    quest.innerHTML = "Pregunta 14";
+                                    count = 11;
+                                }
+                            }
+                            else if (DOSrp9 == "0")
+                            {
+                                //PREGUNTA 12 NO
+                                subsection = 4;
+                                quest.innerHTML = "Pregunta 14";
+                                count = 11;
+                            }
+                        }
+                        else if (subsection == 4)
+                        {
+                            if (DOSrp11 == "1")
+                            {
+                                //PREGUNTA 14 SI
+                                quest.innerHTML = "Pregunta 15";
+                                count = 12;
+                                if (DOSrp12 == "1")
+                                {
+                                    //PREGUNTA 15 SI
+                                    section = 3;
+                                    //PREGUNTA 16 SECCION 3
+                                    count = 1;
+                                }
+                                else if (DOSrp12 == "0")
+                                {
+                                    //PREGUNTA 15 NO
+                                    section = 3;
+                                    count = 1;
+                                    //PREGUNTA 16 SECCION 3
+                                }
+                            }
+                            else if (DOSrp11 == "0")
+                            {
+                                //PREGUNTA 14 NO
+                                section = 3;
+                                count = 1;
+                                //PREGUNTA 16 SECCION 3
+                            }
+                        }
+                    }
+                    else if (DOSrp1 == "0")
+                    {
+                        //PREGUNTA 4 NO
+                        section = 3;
+                        quest.innerHTML = "Pregunta 16";
+                        //PREGUNTA 15 SECCION 3
+                        count = 1;
+                    }
+                }
+
+                else if (section == 3)
+                {
+                    if (count == 1) TRESrp1 = valradio;
+
+                    if (TRESrp1 == "1")
+                    {
+                        alert('pregunta 16 SI');
+                    }
+                    
+                }
+                
+
+
+
+
+
+
+
+
+                $("#valtotal").val(sTotal);
+                
+                //var valradio = $('input[name=optionsRadios]:checked').val();
+                //sParc = sParc + valradio;
+
+                //switch (sParc)
+                //{
+                //    case "1": sWeb = "YES"; sParc = sParc + sWeb; quest.innerHTML = "¿Sabe usted si su empresa vende sus productos a través de su página web?"; break;
+                //    case "1YES1": quest.innerHTML = "¿Sabe usted si su empresa tiene implementado un botón de pago en su página web?"; break;
+                //    case "1YES0": case "1YES11": case "1YES10": quest.innerHTML = "¿Sabe usted si los clientes de su empresa poseen dispositivos móviles (featured phones o smartphones)?"; break;
+                //    case "0": sWeb = "NO"; sParc = sParc + sWeb; quest.innerHTML = "¿Sabe usted si los clientes de su empresa poseen dispositivos móviles (featured phones o smartphones)?"; break;
+                //    case "0NO1": case "1YES01": case "1YES111": case "1YES101": quest.innerHTML = "¿Sabe usted si los clientes de su empresa envían constantemente SMS?"; break;
+                //    case "0NO11": case "1YES011": case "1YES1111": case "1YES1011": quest.innerHTML = "¿Sabe usted si su empresa tiene implementado un mecanismo de pago basado en SMS Billing?"; break;
+                //}
+
+                //sTotal = sParc;
+
+                //$("#valtotal").val(sParc);
+
+                cambiarEstado();
+                //$("#valtotal").val(count);
+                //count++;
+            });
+        })
+
+
+
+
+
+
+
+
+
+
+
+        function cambiarEstado()
+        {
+            var elemento = $('#pregunta');
+            elemento.prop('checked', false);
+
+            var index = elemento.index()+1;
+            $(':radio').eq(index).prop('checked', false);
+            
+        }
+    </script>    
+}
