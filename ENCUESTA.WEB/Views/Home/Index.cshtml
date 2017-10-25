@@ -10,7 +10,7 @@
             <div class="nav-tabs-wrapper">
                 <ul class="nav nav-tabs" data-tabs="tabs">
                     <li>
-                        <h2>PREGUNTA</h2>
+                        <h2 id="numberquest">PREGUNTA 1</h2>
                     </li>
                 </ul>
             </div>
@@ -40,7 +40,7 @@
                     </div>
 
                     <div class="tab-content">
-                        <button type="button" id="back" class="btn btn-danger pull-left" onclick="cambiarEstado()">ATRÁS</button>
+                        <button type="button" id="back" class="btn btn-danger pull-left">ATRÁS</button>
                         <button type="button" id="next" class="btn btn-danger pull-right">SIGUIENTE</button>
                     </div>
                 </div>
@@ -81,6 +81,8 @@
                 }
 
                 sTotal += valradio;
+                var numquest = sTotal.length + 1;
+                document.getElementById('numberquest').innerHTML = "PREGUNTA " +numquest;
 
                 if (section == 1)
                 {
@@ -214,8 +216,13 @@
                                     //PREGUNTA 8 NO, PREGUNTA 1 SI
                                     quest.innerHTML = "Pregunta 9";
                                     count = 6;
-
                                     //RECOMENDACION
+                                }
+                                else if ((DOSrp5 == "1" && UNOrp1 == "0") || (DOSrp5 == "0" && UNOrp1 == "0"))
+                                {
+                                    //PREGUNTA 8 SI O NO, PREGUNTA 1 NO
+                                    quest.innerHTML = "Pregunta 9";
+                                    count = 6;
                                 }
 
                                 if (DOSrp6 == "1")
@@ -702,6 +709,14 @@
 
                 cambiarEstado();
             });
+
+            $("#back").click(function () {
+
+                var pathactual = sTotal;
+                var sectionactual = section;
+
+                alert('path actual: ' + pathactual + " Section actual: " + sectionactual);
+            })
         })
         
         function cambiarEstado()
