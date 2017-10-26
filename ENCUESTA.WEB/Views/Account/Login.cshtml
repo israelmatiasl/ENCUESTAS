@@ -1,0 +1,26 @@
+﻿@model ENCUESTA.WEB.ViewModel.AccountViewModel.LoginViewModel
+@{
+    ViewBag.Title = "Login";
+}
+
+@using (Html.BeginForm("Login", "Account", FormMethod.Post))
+{
+    <div class="form-group">
+        <div class="col-md-12">
+            @Html.TextBoxFor(x => x.email, new { @class = "form-control", @placeholder = "Email..." })
+            @*@Html.ValidationMessageFor(x => x.email, "", new { @class = "text-danger" })*@
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-12">
+            @Html.PasswordFor(x => x.password, new { @class = "form-control", @placeholder = "Contraseña..." })
+            @*@Html.ValidationMessageFor(x => x.password, "", new { @class = "text-danger" })*@
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-google btn-block">Ingresar</button>
+        </div>
+    </div>
+}
+

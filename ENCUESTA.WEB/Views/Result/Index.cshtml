@@ -1,0 +1,57 @@
+﻿@model ENCUESTA.WEB.ViewModel.RecomendacionesViewModel.ListRecomendacionesViewModel
+@{
+    ViewBag.Title = "Index";
+    Int32 count = 0;
+}
+
+<div class="card card-nav-tabs">
+    <div class="header header-danger">
+        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+        <div class="nav-tabs-navigation">
+            <div class="nav-tabs-wrapper">
+                <h2 style="text-align:center;"><b>Últimos resultados</b> </h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-content">
+        <div id="tables">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th>Nombre</th>
+                                    <th>Fecha</th>
+                                    <th class="text-right"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.resultadostotales)
+                                {
+                                    count++;
+                                    <tr>
+                                        <td class="text-center">@count</td>
+                                        <td>@item.Usuario.nombres</td>
+                                        <td>@item.fecharesultado</td>
+                                        <td class="td-actions text-right">
+                                            <a class="btn btn-info" href="@Url.Action("ShowResult", "Result", new { id = item.resultadosid })">
+                                                <i class="material-icons">search</i>
+                                            </a>
+                                            <a class="btn btn-danger" href="@Url.Action("DeleteResul", "Result", new { id = item.resultadosid })">
+                                                <i class="material-icons">close</i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

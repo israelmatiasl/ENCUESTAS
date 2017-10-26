@@ -1,0 +1,20 @@
+﻿@model ENCUESTA.WEB.ViewModel.RecomendacionesViewModel.ListRecomendacionesViewModel
+@{
+    ViewBag.Title = "ShowResult";
+}
+
+
+
+
+<div class="card card-nav-tabs">
+
+    <div class="card-content">
+        @foreach (var item in Model.ultimoresultado)
+        {
+            <p>@item</p>
+        }
+    </div>
+</div>
+
+
+

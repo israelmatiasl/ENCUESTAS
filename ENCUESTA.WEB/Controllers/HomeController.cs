@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ENCUESTA.WEB.Helpers;
+using ENCUESTA.WEB.Models;
+using ENCUESTA.WEB.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,20 +11,36 @@ namespace ENCUESTA.WEB.Controllers
 {
     public class HomeController : Controller
     {
+        db_EncuestasEntities context = new db_EncuestasEntities();
         public ActionResult Index()
         {
             return View();
         }
-
+        
         [HttpPost]
         public ActionResult EnviarEncuesta(FormCollection formCollection)
         {
-            String recomend = formCollection["rtotal"];
-            List<String> recomendar = recomend.Split('R').ToList();
+            String result = formCollection["rtotal"];
 
-            ViewBag.Recomendaciones = recomendar;
+            Usuario usuario = Session["objusuario"] as Usuario;
 
-            return RedirectToAction("");
+            if(usuario != null)
+            {
+                Resultados resultados = new Resultados();
+                context.Resultados.Add(resultados);
+                resultados.usuarioid = usuario.usuarioid;
+                resultados.resultadototal = result;
+                resultados.fecharesultado = DateTime.Now;
+
+                context.SaveChanges();
+            }
+            else
+            {
+                List<String> listadeRecomendaciones = GetRecomendaciones.MostrarRecomendaciones(result);
+                TempData["lista"] = listadeRecomendaciones;
+            }
+            
+            return RedirectToAction("ShowResult", "Result");
         }
         
     }
