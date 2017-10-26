@@ -17,14 +17,15 @@
         </div>
     </div>
     <div class="card-content">
-        <form method="post">
+        <form method="post" action="@Url.Action("EnviarEncuesta", "Home")">
             <div class="tab-content text-center">
                 <input type="hidden" name="valtotal" id="valtotal" value="1" />
+                <input type="hidden" name="rtotal" id="rtotal" value="1" />
                 <div class="tab-pane active" id="profile">
                     <h3 id="quest">@ENCUESTA.WEB.Helpers.StringsBuilder.pregunta1</h3>
 
                     <hr />
-                    <div class="tab-content text-center">
+                    <div class="tab-content text-center" id="contenedorRadio">
                         <div class="radio">
                             <label>
                                 <input type="radio" id="pregunta" name="optionsRadios" value="1"><span class="circle"></span><span class="check"></span>
@@ -39,9 +40,13 @@
                         </div>
                     </div>
 
-                    <div class="tab-content">
-                        <button type="button" id="back" class="btn btn-danger pull-left">ATRÁS</button>
-                        <button type="button" id="next" class="btn btn-danger pull-right">SIGUIENTE</button>
+                    <div class="tab-content" id="contenedorBoton">
+                        <button type="button" id="back" class="btn btn-danger pull-left">
+                            <h3>Atrás</h3>
+                        </button>
+                        <button type="button" id="next" class="btn btn-danger pull-right">
+                            <h3>Siguiente</h3>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -70,7 +75,7 @@
             var SEISrp1 = "", SEISrp2 = "", SEISrp3 = "";
             var SIETErp1 = "", SIETErp2 = "";
             var OCHOrp1 = "", OCHOrp2 = "";
-            
+            var Recomendacion = "";
 
             $("#next").click(function () {
                 var valradio = $('input[name=optionsRadios]:checked').val();
@@ -116,6 +121,7 @@
                                 quest.innerHTML = "Pregunta 4";
                                 count = 1;
 
+                                Recomendacion += "R1";
                                 //RECOMENDACION
                                 
                             }
@@ -128,7 +134,7 @@
                             quest.innerHTML = "Pregunta 4";
                             count = 1;
 
-
+                            Recomendacion += "R2";
                             //RECOMENDACION
                             
                         }
@@ -141,6 +147,7 @@
                         count = 1;
 
                         //RECOMENDACION
+                        Recomendacion += "R3";
                     }
                 }
                 
@@ -186,6 +193,7 @@
                                     quest.innerHTML = "Pregunta 7";
                                     count = 4;
 
+                                    Recomendacion += "R4";
                                     //RECOMENDACION
                                 }
                             }
@@ -216,6 +224,8 @@
                                     //PREGUNTA 8 NO, PREGUNTA 1 SI
                                     quest.innerHTML = "Pregunta 9";
                                     count = 6;
+
+                                    Recomendacion += "R5";
                                     //RECOMENDACION
                                 }
                                 else if ((DOSrp5 == "1" && UNOrp1 == "0") || (DOSrp5 == "0" && UNOrp1 == "0"))
@@ -238,6 +248,7 @@
                                         quest.innerHTML = "Pregunta 12";
                                         count = 9;
 
+                                        Recomendacion += "R6";
                                         //RECOMENDACION
                                     }
                                     else if (DOSrp7 == "0")
@@ -261,6 +272,7 @@
                                             quest.innerHTML = "Pregunta 12";
                                             count = 9;
 
+                                            Recomendacion += "R7";
                                             //RECOMENDACION
                                         }
                                     }
@@ -273,6 +285,8 @@
                                     quest.innerHTML = "Pregunta 12";
                                     count = 9;
 
+                                    Recomendacion += "R8";
+                                    Recomendacion += "R9";
                                     //RECOMENDACION
                                 }
 
@@ -285,6 +299,7 @@
                                 quest.innerHTML = "Pregunta 12";
                                 count = 9;
 
+                                Recomendacion += "R10";
                                 //RECOMENDACION
                             }
                         }
@@ -312,6 +327,7 @@
                                     quest.innerHTML = "Pregunta 14";
                                     count = 11;
 
+                                    Recomendacion += "R11";
                                     //RECOMENDACION
                                 }
                             }
@@ -323,6 +339,7 @@
                                 quest.innerHTML = "Pregunta 14";
                                 count = 11;
 
+                                Recomendacion += "R12";
                                 //RECOMENDACION
                             }
                         }
@@ -351,6 +368,7 @@
                                     //PREGUNTA 16 SECCION 3
                                     quest.innerHTML = "Pregunta 16";
 
+                                    Recomendacion += "R13";
                                     //RECOMENDACION
                                 }
                             }
@@ -363,6 +381,7 @@
                                 //PREGUNTA 16 SECCION 3
                                 quest.innerHTML = "Pregunta 16";
 
+                                Recomendacion += "R14";
                                 //RECOMENDACION
                             }
                         }
@@ -376,6 +395,7 @@
                         //PREGUNTA 15 SECCION 3
                         count = 1;
 
+                        Recomendacion += "R15";
                         //RECOMENDACION
                     }
                 }
@@ -411,6 +431,7 @@
                                 section = 4;
                                 count = 1;
 
+                                Recomendacion += "R16";
                                 //RECOMENDACION
                             }
                         }
@@ -421,6 +442,7 @@
                             section = 4;
                             count = 1;
 
+                            Recomendacion += "R17";
                             //RECOMENDACION
                         }
                     }
@@ -431,6 +453,7 @@
                         section = 4;
                         count = 1;
 
+                        Recomendacion += "R18";
                         //RECOMENDACION
                     }
                     
@@ -468,6 +491,7 @@
                                 section = 5;
                                 count = 1;
 
+                                Recomendacion += "R19";
                                 //RECOMENDACION
                             }
                         }
@@ -479,6 +503,7 @@
                             section = 5;
                             count = 1;
 
+                            Recomendacion += "R20";
                             //RECOMENDACION
                         }
                     }
@@ -490,6 +515,7 @@
                         section = 5;
                         count = 1;
 
+                        Recomendacion += "R21";
                         //RECOMENDACION
                     }
                 }
@@ -513,6 +539,8 @@
                             quest.innerHTML = "Pregunta 26";
                             section = 6;
                             count = 1;
+
+                            Recomendacion += "R22";
 
                             //RECOMENDACION
                         }
@@ -542,6 +570,7 @@
                                     section = 6;
                                     count = 1;
 
+                                    Recomendacion += "R23";
                                     //RECOMENDACION
                                 }
                             }
@@ -553,6 +582,7 @@
                                 section = 6;
                                 count = 1;
 
+                                Recomendacion += "R24";
                                 //RECOMENDACION
                             }
                         }
@@ -565,6 +595,7 @@
                         section = 6;
                         count = 1;
 
+                        Recomendacion += "R25";
                         //RECOMENDACION
                     }
                 }
@@ -594,6 +625,7 @@
                                 count = 3;
                                 subsection1 = 2;
 
+                                Recomendacion += "R26";
                                 //RECOMENDACION
                             }
                         }
@@ -615,6 +647,7 @@
                                 section = 7;
                                 count = 1;
 
+                                Recomendacion += "R27";
                                 //RECOMENDACION
                             }
                         }
@@ -628,6 +661,7 @@
                         section = 7;
                         count = 1;
 
+                        Recomendacion += "R28";
                         //RECOMENDACION
                     }
                 }
@@ -658,6 +692,7 @@
                             section = 8;
                             count = 1;
 
+                            Recomendacion += "R29";
                             //RECOMENDACION
                         }
                     }
@@ -669,6 +704,7 @@
                         section = 8;
                         count = 1;
 
+                        Recomendacion += "R30";
                         //RECOMENDACIONES
                     }
                 }
@@ -686,25 +722,29 @@
                         if (OCHOrp2 == "1")
                         {
                             //PREGUNTA 32 SI
-                            alert('ACABO');
+                            finishQuest();
                         }
                         else if (OCHOrp2 == "0")
                         {
                             //PREGUNTA 32 NO
-                            alert('ACABO');
+                            Recomendacion += "R31";
                             //RECOMENDACIÓN
+                            
+                            finishQuest();
                         }
                     }
                     else if (OCHOrp1 == "0")
                     {
-                        //PREGUNTA 32 NO
-                        alert('ACABO');
-                        //RECOMENDACIÓN
+                        //PREGUNTA 31 NO
+                        Recomendacion += "R32";
+                        //RECOMENDACION
+                        
+                        finishQuest();
                     }
                 }
 
                 $("#valtotal").val(sTotal);
-                
+                $("#rtotal").val(Recomendacion);
                 
 
                 cambiarEstado();
@@ -727,6 +767,26 @@
             var index = elemento.index()+1;
             $(':radio').eq(index).prop('checked', false);
             
+        }
+
+        function finishQuest() {
+
+            document.getElementById('quest').innerHTML = "YA TERMINÓ, ENVÍELO PARA SER EVALUADO";
+
+            var buttonremnext = document.getElementById('next');
+            buttonremnext.parentNode.removeChild(buttonremnext);
+
+            var buttonremback = document.getElementById('back');
+            buttonremback.parentNode.removeChild(buttonremback);
+
+            var radiorem = document.getElementById('contenedorRadio');
+            radiorem.parentNode.removeChild(radiorem);
+
+            var newbutton = $(document.createElement('button')).attr("class", "btn btn-danger pull-center").attr("type", "submit");
+            newbutton.after().html('<h3> ENVIAR </h3>');
+            newbutton.appendTo("#contenedorBoton");
+
+            return false;
         }
     </script>    
 }

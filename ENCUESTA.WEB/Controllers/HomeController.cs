@@ -12,6 +12,17 @@ namespace ENCUESTA.WEB.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult EnviarEncuesta(FormCollection formCollection)
+        {
+            String recomend = formCollection["rtotal"];
+            List<String> recomendar = recomend.Split('R').ToList();
+
+            ViewBag.Recomendaciones = recomendar;
+
+            return RedirectToAction("");
+        }
         
     }
 }
