@@ -8,13 +8,43 @@
 
 <div class="card card-nav-tabs">
 
+    <div class="header header-danger">
+        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+        <div class="nav-tabs-navigation">
+            <div class="nav-tabs-wrapper">
+                <h2 style="text-align:center">Recomendaciones</h2>
+            </div>
+        </div>
+    </div>
+
     <div class="card-content">
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card card-profile card-atv">
+                <div class="card-image">
+                    <a >
+                        <div class="atvImg">
+                            <img class="img" src="@Url.Content("~/Content/assets/img/examples/card-profile7.jpg")" />
+                        </div>
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h4 class="card-title">Tamara Bell</h4>
+                    <h6 class="category text-gray">CEO / Co-Founder</h6>
+                    <div class="footer">
+                        <a href="#pablo" class="btn btn-just-icon btn-twitter btn-round"><i class="fa fa-twitter"></i></a>
+                        <a href="#pablo" class="btn btn-just-icon btn-facebook btn-round"><i class="fa fa-facebook-square"></i></a>
+                        <a href="#pablo" class="btn btn-just-icon btn-google btn-round"><i class="fa fa-google"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         @foreach (var item in Model.ultimoresultado)
         {
             <p>@item</p>
         }
     </div>
 </div>
-
 
 
