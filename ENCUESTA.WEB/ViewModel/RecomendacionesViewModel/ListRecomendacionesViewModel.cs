@@ -14,12 +14,19 @@ namespace ENCUESTA.WEB.ViewModel.RecomendacionesViewModel
         public List<Resultados> resultadostotales { get; set; }
         public List<String> ultimoresultado { get; set; }
 
+        public List<String> mostrarRP { get; set; }
+        public List<String> mostrarRS { get; set; }
+
         public ListRecomendacionesViewModel() { }
 
         public List<String> detailultimoresultado(Int64 idusuario)
         {
             String resultado = context.Resultados.Where(x=>x.usuarioid == idusuario).OrderByDescending(x => x.fecharesultado).Select(x=>x.resultadototal).FirstOrDefault();
             ultimoresultado = GetRecomendaciones.MostrarRecomendaciones(resultado);
+
+            mostrarRP = GetRecomendaciones.RecomendacionesPrincipales(GetRecomendaciones.BuildRecomendacionesPrincipales(ultimoresultado));
+            mostrarRS = GetRecomendaciones.RecomendacionesSecundarias(GetRecomendaciones.BuildRecomendacionesSecundarias(GetRecomendaciones.BuildRecomendacionesPrincipales(ultimoresultado), ultimoresultado));
+
             return ultimoresultado;
         }
 
@@ -32,6 +39,10 @@ namespace ENCUESTA.WEB.ViewModel.RecomendacionesViewModel
         {
             String resultado = context.Resultados.Where(x=>x.resultadosid == idresultado).Select(x => x.resultadototal).FirstOrDefault();
             ultimoresultado = GetRecomendaciones.MostrarRecomendaciones(resultado);
+
+            mostrarRP = GetRecomendaciones.RecomendacionesPrincipales(GetRecomendaciones.BuildRecomendacionesPrincipales(ultimoresultado));
+            mostrarRS = GetRecomendaciones.RecomendacionesSecundarias(GetRecomendaciones.BuildRecomendacionesSecundarias(GetRecomendaciones.BuildRecomendacionesPrincipales(ultimoresultado), ultimoresultado));
+
             return ultimoresultado;
         }
     }

@@ -37,9 +37,11 @@ namespace ENCUESTA.WEB.Controllers
             else
             {
                 List<String> listadeRecomendaciones = GetRecomendaciones.MostrarRecomendaciones(result);
-                TempData["lista"] = listadeRecomendaciones;
+                TempData["listaTotal"] = listadeRecomendaciones;
+                TempData["recomendP"] = GetRecomendaciones.RecomendacionesPrincipales(GetRecomendaciones.BuildRecomendacionesPrincipales(listadeRecomendaciones));
+                TempData["recomendS"] = GetRecomendaciones.RecomendacionesSecundarias(GetRecomendaciones.BuildRecomendacionesSecundarias(GetRecomendaciones.BuildRecomendacionesPrincipales(listadeRecomendaciones), listadeRecomendaciones));
             }
-            
+
             return RedirectToAction("ShowResult", "Result");
         }
         

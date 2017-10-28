@@ -45,7 +45,9 @@ namespace ENCUESTA.WEB.Controllers
                 }
                 else
                 {
-                    objviewmodel.ultimoresultado = TempData["lista"] as List<String>;
+                    objviewmodel.ultimoresultado = TempData["listaTotal"] as List<String>;
+                    objviewmodel.mostrarRP = TempData["recomendP"] as List<String>;
+                    objviewmodel.mostrarRS = TempData["recomendS"] as List<String>;
                     resultadosamostrar = objviewmodel.ultimoresultado;
                 }
 

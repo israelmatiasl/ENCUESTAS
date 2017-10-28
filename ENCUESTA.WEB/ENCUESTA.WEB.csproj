@@ -156,6 +156,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\BuildUI.cs" />
     <Compile Include="Helpers\GetRecomendaciones.cs" />
     <Compile Include="Helpers\StringsBuilder.cs" />
     <Compile Include="Models\EncuestaModel.Context.cs">

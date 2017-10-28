@@ -1,4 +1,11 @@
-﻿<!doctype html>
+﻿@{ 
+    ENCUESTA.WEB.Models.Usuario usuario = Session["objusuario"] as ENCUESTA.WEB.Models.Usuario;
+    if(usuario!=null)
+    {
+
+    }
+}
+<!doctype html>
 <html lang="en">
 <!-- Mirrored from demos.creative-tim.com/material-kit-pro/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Jul 2017 02:57:52 GMT -->
 <head>
@@ -34,10 +41,22 @@
             </div>
             <div class="collapse navbar-collapse" id="example-navbar-info">
                 <ul class="nav navbar-nav navbar-right">
+
+                    @if (usuario != null)
+                    {
+                        <li><a href="@Url.Action("ShowResult", "Result")">Mi última encuesta</a></li>
+                        <li><a href="@Url.Action("Index", "Result")">Mis últimas encuestas</a></li>
+                    }
                     <li class="active">
-                        <a href="@Url.Action("Login", "Account")">
-                            Ingresar
-                        </a>
+                        @if (usuario != null)
+                        {
+                            <a href="@Url.Action("SignOut", "Account")"> Salir</a>
+                        }
+                        else
+                        {
+
+                            <a href="@Url.Action("Login", "Account")"> Ingresar</a>
+                        }
                     </li>
                 </ul>
             </div>
@@ -46,10 +65,8 @@
 
         <div class="header-danger">
             <div class="page-header">
-                <div class="container">
-                    <div class="row">
-                        @RenderBody()
-                    </div>
+                <div class="container" >
+                    @RenderBody()
                 </div>
             </div>
         </div>

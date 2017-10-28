@@ -38,5 +38,25 @@ namespace ENCUESTA.WEB.Controllers
                 return View();
             }
         }
+
+        [HttpPost]
+        public ActionResult Register(RegisterViewModel objviewmodel)
+        {
+            Usuario usuario = new Usuario();
+            context.Usuario.Add(usuario);
+            usuario.nombres = objviewmodel.nombres;
+            usuario.email = objviewmodel.email;
+            usuario.password = objviewmodel.password;
+
+            context.SaveChanges();
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult SignOut()
+        {
+            Session["objusuario"] = null;
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
