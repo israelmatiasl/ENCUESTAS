@@ -181,6 +181,7 @@
       <DependentUpon>EncuestaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\AccountViewModel\AccountCompleteViewModel.cs" />
     <Compile Include="ViewModel\AccountViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\AccountViewModel\RegisterViewModel.cs" />
     <Compile Include="ViewModel\RecomendacionesViewModel\AddRecomendacionesViewModel.cs" />
@@ -258,6 +259,7 @@
     <Content Include="Content\assets\img\bg11.jpg" />
     <Content Include="Content\assets\img\bg12.jpg" />
     <Content Include="Content\assets\img\bg2.jpg" />
+    <Content Include="Content\assets\img\bg26.jpg" />
     <Content Include="Content\assets\img\bg3.jpg" />
     <Content Include="Content\assets\img\bg5.jpg" />
     <Content Include="Content\assets\img\bg6.jpg" />
@@ -410,10 +412,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Result\Index.cshtml" />
     <Content Include="Views\Result\ShowResult.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Home\Encuesta.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

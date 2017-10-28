@@ -16,7 +16,7 @@ namespace ENCUESTA.WEB.Controllers
             Usuario user = Session["objusuario"] as Usuario;
             if(user==null)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Encuesta", "Home");
             }
 
             ListRecomendacionesViewModel objviewmodel = new ListRecomendacionesViewModel();
@@ -53,14 +53,14 @@ namespace ENCUESTA.WEB.Controllers
 
                 if(resultadosamostrar is null)
                 {
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Encuesta", "Home");
                 }
 
                 return View(objviewmodel);
             }
             catch
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Encuesta", "Home");
             }
             
         }

@@ -12,22 +12,18 @@ namespace ENCUESTA.WEB.Controllers
     {
         db_EncuestasEntities context = new db_EncuestasEntities();
         // GET: Account
-        public ActionResult Login()
-        {
-            LoginViewModel objviewmodel = new LoginViewModel();
-            return View(objviewmodel);
-        }
-
         [HttpPost]
-        public ActionResult Login(LoginViewModel objviewmodel)
+        public ActionResult Login(FormCollection form)
         {
             try
             {
-                Usuario usuario = context.Usuario.FirstOrDefault(x => x.email == objviewmodel.email && x.password == objviewmodel.password);
+                String email = form["emaillogin"];
+                String pass = form["passlogin"];
+                Usuario usuario = context.Usuario.FirstOrDefault(x => x.email == email && x.password == pass);
                 if(usuario == null)
                 {
                     //EMAIL O PASSWORD INCORRECTOS
-                    return View();
+                    return RedirectToAction("Index", "Home");
                 }
                 Session["objusuario"] = usuario;
 
@@ -35,22 +31,33 @@ namespace ENCUESTA.WEB.Controllers
             }
             catch
             {
-                return View();
+                return RedirectToAction("Index", "Home");
             }
         }
 
         [HttpPost]
-        public ActionResult Register(RegisterViewModel objviewmodel)
+        public ActionResult Register(FormCollection form)
         {
-            Usuario usuario = new Usuario();
-            context.Usuario.Add(usuario);
-            usuario.nombres = objviewmodel.nombres;
-            usuario.email = objviewmodel.email;
-            usuario.password = objviewmodel.password;
+            try
+            {
+                String name = form["namereg"];
+                String email = form["emailreg"];
+                String pass = form["passreg"];
 
-            context.SaveChanges();
+                Usuario usuario = new Usuario();
+                context.Usuario.Add(usuario);
+                usuario.nombres = name;
+                usuario.email = email;
+                usuario.password = pass;
 
-            return RedirectToAction("Index", "Home");
+                context.SaveChanges();
+
+                return RedirectToAction("Index", "Home");
+            }
+            catch
+            {
+                return RedirectToAction("Index", "Home");
+            }
         }
 
         public ActionResult SignOut()

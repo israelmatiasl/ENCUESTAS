@@ -17,6 +17,11 @@ namespace ENCUESTA.WEB.Controllers
             return View();
         }
         
+        public ActionResult Encuesta()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult EnviarEncuesta(FormCollection formCollection)
         {
