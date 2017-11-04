@@ -29,8 +29,9 @@ namespace ENCUESTA.WEB.Controllers
 
                 return RedirectToAction("Index", "Home");
             }
-            catch
+            catch(Exception ex)
             {
+                String mss = ex.Message;
                 return RedirectToAction("Index", "Home");
             }
         }

@@ -2,29 +2,65 @@
 @model ENCUESTA.WEB.ViewModel.RecomendacionesViewModel.ListRecomendacionesViewModel
 @{
     ViewBag.Title = "ShowResult";
+    TempData["pageresult"] = "results";
 }
 
 
 
+<h2>Recomendación general</h2>
 
-<div class="card card-nav-tabs" style="top:-80px;">
+
+
+
+@*<div class="row">
+    <div class="col-md-3 col-lg-3">
+        <div class="rotating-card-container" style="height:200px; width:200px;">
+            <div class="card card-rotate">
+                <div class="front">
+                    <div class="card-content" style="height: 200px; width: 200px; background-image: url('@Url.Content("~/Content/assets/img/buttons/2_SMS_Billing.jpg")');">
+
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="card-content">
+                        <h5 class="card-title">
+                            Dash Button
+                        </h5>
+                        <p class="card-description">
+                            Si desea más información sobre este método de pago haga clic en Ver más
+                        </p>
+                        <div class="footer text-center">
+                            <a href="#pablo" class="btn btn-danger btn-round">
+                                <i class="material-icons">subject</i> Ver más
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <h4 align="center">Dash Button</h4>
+            </div>
+        </div>
+    </div>
+</div>*@
+<div>
+    <h3>Propuesta de medios de pago digitales para su negocio</h3>
+    @foreach (var item in Model.mostrarRP)
+    {
+        @Html.Raw(BuildUI.builRecomendPHtml(item));
+    }
+</div>
+<div class="card card-nav-tabs" style="margin-top:150px;">
 
     <div class="header header-danger">
         <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
         <div class="nav-tabs-navigation">
             <div class="nav-tabs-wrapper">
-                <h2 style="text-align:center"><b>Recomendaciones</b></h2>
+                <h4 style="margin-left:30px">Propuesta de Implementación de Tecnología</h4>
             </div>
         </div>
     </div>
     <div class="card-content">
         <div class="tab-content text-center">
             <div class="tab-pane active" id="profile">
-                @foreach (var item in Model.mostrarRP)
-                {
-                    @Html.Raw(BuildUI.builRecomendPHtml(item));
-                }
-                <hr />
                 <div class="tab-content" id="contenedorRadio">
                     @foreach (var item in Model.mostrarRS)
                     {
@@ -34,7 +70,8 @@
                 </div>
             </div>
         </div>
+
     </div>
+
+
 </div>
-
-

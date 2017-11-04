@@ -266,6 +266,22 @@
     <Content Include="Content\assets\img\bg7.jpg" />
     <Content Include="Content\assets\img\bg8.jpg" />
     <Content Include="Content\assets\img\bg9.jpg" />
+    <Content Include="Content\assets\img\buttons\10_Soluciones de social banking %28Whatsapp%29.jpg" />
+    <Content Include="Content\assets\img\buttons\11_Aplicaciones QR %28Revistas%29.jpg" />
+    <Content Include="Content\assets\img\buttons\12_Beacons.jpg" />
+    <Content Include="Content\assets\img\buttons\13_Tarjetas de fidelización.jpg" />
+    <Content Include="Content\assets\img\buttons\14_Tarjetas de descuentos.jpg" />
+    <Content Include="Content\assets\img\buttons\15_Giftcards.jpg" />
+    <Content Include="Content\assets\img\buttons\16_Dash Button.jpg" />
+    <Content Include="Content\assets\img\buttons\1_Boton_de_pago.jpg" />
+    <Content Include="Content\assets\img\buttons\2_SMS_Billing.jpg" />
+    <Content Include="Content\assets\img\buttons\3_Aplicación QR %28Venta por QR página web%29.jpg" />
+    <Content Include="Content\assets\img\buttons\4_Soluciones_NFC.jpg" />
+    <Content Include="Content\assets\img\buttons\5_Mobile_POS.jpg" />
+    <Content Include="Content\assets\img\buttons\6_NFC_POS.jpg" />
+    <Content Include="Content\assets\img\buttons\7_IVR_Billing.jpg" />
+    <Content Include="Content\assets\img\buttons\8_Carrier_Billing.jpg" />
+    <Content Include="Content\assets\img\buttons\9_Tecnología cognitiva %28Chatbot%29.jpg" />
     <Content Include="Content\assets\img\cd-arrow-bottom.svg" />
     <Content Include="Content\assets\img\dg1.jpg" />
     <Content Include="Content\assets\img\dg10.jpg" />
@@ -388,6 +404,8 @@
     <Content Include="Models\EncuestaModel.edmx.diagram">
       <DependentUpon>EncuestaModel.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\EncuestasWeb - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\EncuestasWeb - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

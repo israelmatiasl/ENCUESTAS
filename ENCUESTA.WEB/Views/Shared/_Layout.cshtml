@@ -53,7 +53,7 @@
                     @if (usuario != null)
                     {
                         <li><a href="@Url.Action("ShowResult", "Result")">Mi última encuesta</a></li>
-                        <li><a href="@Url.Action("Index", "Result")">Mis últimas encuestas</a></li>
+                        <li><a href="@Url.Action("Index", "Result")">Mi historial de encuestas</a></li>
                     }
 
                     @if (usuario != null)
@@ -65,23 +65,28 @@
                     }
                     else
                     {
+                        if (TempData["title"] as String != "encuesta")
+                        {
 
-                        <li class="active" style="padding-right:15px">
-                            <button class="btn btn-danger" data-toggle="modal" data-target="#signupModal" >
-                                Registrarse
-                            </button>
-                        </li>
-                        <li>
-                            <button class="btn btn-danger" data-toggle="modal" data-target="#loginModal">
-                                Ingresar
-                            </button>
-                        </li>
+                            <li class="active" style="padding-right:15px">
+                                <button class="btn btn-danger" data-toggle="modal" data-target="#signupModal">
+                                    Registrarse
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn btn-danger" data-toggle="modal" data-target="#loginModal">
+                                    Ingresar
+                                </button>
+                            </li>
+                        }
                     }
                 </ul>
             </div>
         </div>
     </nav>
 
+    @if (TempData["pageresult"] as String != "results")
+    {
         <div class="header-danger">
             @if (TempData["title"] as String == "indexhome")
             {
@@ -102,6 +107,19 @@
                 </div>
             }
         </div>
+    }
+    else
+    {
+        <div class="section-space"></div>
+        <div class="section-space"></div>
+        <div class="cd-section">
+            <div class="container">
+                @RenderBody()
+            </div>
+        </div>
+    }
+
+
 
 
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

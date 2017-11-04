@@ -3,9 +3,9 @@
 }
 
 <div class="card card-nav-tabs">
-    <div class="header header-danger">
+    <div class="header header-danger" >
         <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
-        <div class="nav-tabs-navigation">
+        <div class="nav-tabs-navigation" >
             <div class="nav-tabs-wrapper">
                 <ul class="nav nav-tabs" data-tabs="tabs">
                     <li>
@@ -772,8 +772,11 @@
         }
 
         function finishQuest() {
-
-            document.getElementById('quest').innerHTML = "YA TERMINÓ, ENVÍELO PARA SER EVALUADO";
+            
+            var titlee = document.getElementById('numberquest');
+            titlee.innerHTML = "CUESTIONARIO FINALIZADO";
+            quest.innerHTML = "YA TERMINÓ, ENVÍELO PARA SER EVALUADO";
+            //document.getElementById('quest').innerHTML = "YA TERMINÓ, ENVÍELO PARA SER EVALUADO";
 
             var buttonremnext = document.getElementById('next');
             buttonremnext.parentNode.removeChild(buttonremnext);
