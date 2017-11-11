@@ -1,0 +1,151 @@
+﻿
+@{
+    ViewBag.Title = "TarjetasDescuento";
+    Layout = "~/Views/Shared/_LayoutTipoPago.cshtml";
+}
+
+<div class="section section-gray">
+    <div class="container">
+        <div class="main main-raised main-product">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="tab-content">
+                        <div class="tab-pane" id="product-page1">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/descuento1.jpg")" />
+                        </div>
+                        <div class="tab-pane active" id="product-page2">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/descuento2.jpg")" />
+                        </div>
+                        <div class="tab-pane" id="product-page3">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/descuento3.jpg")" />
+                        </div>
+                        <div class="tab-pane" id="product-page4">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/descuento4.jpg")" />
+                        </div>
+                    </div>
+                    <ul class="nav flexi-nav" role="tablist" id="flexiselDemo1">
+                        <li>
+                            <a href="#product-page1" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/descuento1.jpg")" />
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#product-page2" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/descuento2.jpg")" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-page3" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/descuento3.jpg")" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-page4" role="tab" data-toggle="tab" aria-expanded="true">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/descuento4.jpg")" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <h2 class="title"> Tarjeta de fidelización </h2>
+                    <div id="acordeon">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            Descripción
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p>Las tarjetas de descuento son tarjetas enfocadas en la disminución del precio de productos o servicios de la empresa, las cuales son entregadas a los clientes como parte de un estrategia de marketing en donde se ve implicada la fidelización del cliente y el aumento en la ventas mediante dichos descuentos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            Funcionamiento
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Un programa de descuento funciona bien para casi todas las empresas que ofrecen servicios o productos.Una empresa de marketing, por ejemplo, podría dar al cliente un descuento del 20% en un nuevo producto o servicio. Este tipo de programa de fidelización de clientes demuestra aprecio por los clientes y puede ser útil en el fortalecimiento de las relaciones.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div><!--  end acordeon -->
+                </div>
+            </div>
+        </div>
+        <div class="features text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-info">
+                            <i class="material-icons">verified_user</i>
+                        </div>
+                        <h4 class="info-title">Beneficios </h4>
+                        <ul>
+                            <li>Aumento en los ingresos por ventas de productos o servicios con descuento</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-success">
+                            <i class="material-icons">local_shipping</i>
+                        </div>
+                        <h4 class="info-title">Funcionamiento</h4>
+                        <div class="iframe-container">
+                            <iframe height="250" src="https://www.youtube.com/embed/u5HGXqd4eUU" frameborder="0" gesture="media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-rose">
+                            <i class="material-icons">verified_user</i>
+                        </div>
+                        <h4 class="info-title">Beneficios</h4>
+                        <ul>
+                            <li>Retención de los clientes</li>
+                            <li>Relación directa con las tarjetas de fidelización</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related-products">
+            <h3 class="title text-center">Proveedores</h3>
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-product">
+                        <div class="card-image">
+                            <a href="http://www.gpc-sa.com.ar/es/comerciales-2.html">
+                                <img class="img" src="@Url.Content("~/Content/assets/img/tipopago/pdescuento1.jpg")" />
+                            </a>
+                        </div>
+                        <div class="card-content">
+
+                            <h4 class="card-title">
+                                <a href="http://www.gpc-sa.com.ar/es/comerciales-2.html">General Plastic Corp</a>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

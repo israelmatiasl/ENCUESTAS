@@ -1,0 +1,220 @@
+﻿
+@{
+    ViewBag.Title = "IVRBilling";
+    Layout = "~/Views/Shared/_LayoutTipoPago.cshtml";
+}
+
+<div class="section section-gray">
+    <div class="container">
+        <div class="main main-raised main-product">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="tab-content">
+                        <div class="tab-pane" id="product-page1">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/ivr1.jpg")" />
+                        </div>
+                        <div class="tab-pane active" id="product-page2">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/ivr2.jpg")" />
+                        </div>
+                        <div class="tab-pane" id="product-page3">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/ivr3.jpg")" />
+                        </div>
+                        <div class="tab-pane" id="product-page4">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/ivr4.jpg")" />
+                        </div>
+                    </div>
+                    <ul class="nav flexi-nav" role="tablist" id="flexiselDemo1">
+                        <li>
+                            <a href="#product-page1" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/ivr1.jpg")" />
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#product-page2" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/ivr2.jpg")" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-page3" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/ivr3.jpg")" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-page4" role="tab" data-toggle="tab" aria-expanded="true">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/ivr4.jpg")" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <h2 class="title"> IVR Billing </h2>
+                    <div id="acordeon">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            Descripción
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p>La Respuesta de Voz Interactiva o IVR es una tecnología de telefonía que le permite a los clientes interactuar con el sistema de atención de la compañía a través de menúes de voz configurables, en tiempo real, utilizando tonos DTMF.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            ¿Cómo funciona un sistema IVR?
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        En un sistema IVR, las personas que llaman se les da la posibilidad de seleccionar las opciones pulsando las teclas. Al presionar un dígito en el teclado del teléfono se envía un tono DTMF al sistema de atención de la empresa el cual selecciona a continuación la acción / respuesta apropiada de acuerdo con el dígito pulsado.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            ¿Dónde son usados los Sistemas IVR?
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+
+                                        Los Sistemas IVR normalmente pueden manejar y dar servicio a altos volúmenes de llamadas telefónicas . Con un sistema de respuesta de voz interactiva las empresas pueden reducir los costos y mejorar la experiencia de los clientes, debido a que las personas que llaman obtienen la información que necesitan las 24 horas del día sin la necesidad de personal humano costoso.
+                                        Algunas aplicaciones de IVR incluyen banca telefónica, información de la programación de vuelos y televoto.
+                                        3CX tiene incorporado un IVR que está diseñado para aumentar la competencia de cualquier negocio mediante el aumento de la flexibilidad, simplificación de procesos y reducción de costos, al mismo tiempo mejorando la satisfacción del cliente.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--  end acordeon -->
+                </div>
+            </div>
+        </div>
+        <div class="features text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-info">
+                            <i class="material-icons">verified_user</i>
+                        </div>
+                        <h4 class="info-title">Beneficios </h4>
+                        <ul>
+                            <li>Automatización del proceso de pagos del negocio </li>
+                            <li>Reduccion de costos y aumento de horarios de atención </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-success">
+                            <i class="material-icons">local_shipping</i>
+                        </div>
+                        <h4 class="info-title">Funcionamiento</h4>
+                        <div class="iframe-container">
+                            <iframe height="250" src="https://www.youtube.com/embed/2NAP2CMIpAo" frameborder="0" gesture="media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-rose">
+                            <i class="material-icons">verified_user</i>
+                        </div>
+                        <h4 class="info-title">Beneficios</h4>
+                        <ul>
+                            <li>Aumento en la flexibilidad del pago  </li>
+                            <li>Ingreso al modelo de pago móviles para obtener ventaja competitiva</li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related-products">
+            <h3 class="title text-center">Proveedores</h3>
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-product">
+                        <div class="card-image">
+                            <a href="http://www.comunicatefacil.com/servicios/ivr-masivo/">
+                                <img class="img" src="@Url.Content("~/Content/assets/img/tipopago/pivr1.jpg")" />
+                            </a>
+                        </div>
+                        <div class="card-content">
+
+                            <h4 class="card-title">
+                                <a href="http://www.comunicatefacil.com/servicios/ivr-masivo/">Comunícate fácil</a>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-product">
+                        <div class="card-image">
+                            <a href="http://www.smsmasivos.com.pe/#CONTACTO">
+                                <img class="img" src="@Url.Content("~/Content/assets/img/tipopago/pivr2.jpg")" />
+                            </a>
+                        </div>
+                        <div class="card-content">
+
+                            <h4 class="card-title">
+                                <a href="http://www.smsmasivos.com.pe/#CONTACTO">SMS Masivos</a>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-product">
+                        <div class="card-image">
+                            <a href="http://connectperu.com/esp/contact.php">
+                                <img class="img" src="@Url.Content("~/Content/assets/img/tipopago/pivr3.jpg")" />
+                            </a>
+                        </div>
+                        <div class="card-content">
+
+                            <h4 class="card-title">
+                                <a href="http://connectperu.com/esp/contact.php">Connect Perú</a>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-product">
+                        <div class="card-image">
+                            <a href="http://glgperu.com/services.html">
+                                <img class="img" src="@Url.Content("~/Content/assets/img/tipopago/pivr4.jpg")" />
+                            </a>
+                        </div>
+                        <div class="card-content">
+
+                            <h4 class="card-title">
+                                <a href="http://glgperu.com/services.html">GLG Perú</a>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

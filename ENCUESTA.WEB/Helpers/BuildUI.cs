@@ -15,22 +15,22 @@ namespace ENCUESTA.WEB.Helpers
 
             switch (recomend)
             {
-                case "Botón de pago": link = $"https://sites.google.com/view/medios-de-pago-digitales/bot%C3%B3n-de-pago"; imagename = "1_Boton_de_pago.jpg"; break;
-                case "SMS Billing": link = $"https://sites.google.com/view/medios-de-pago-digitales/sms-billing"; imagename = "2_SMS_Billing.jpg"; break;
-                case "Aplicación QR(Venta por QR página web)": link = $"https://sites.google.com/view/medios-de-pago-digitales/aplicaci%C3%B3n-qr"; imagename = "3_Aplicación QR (Venta por QR página web).jpg"; break;
-                case "Soluciones NFC (Mediante billetera electronica)": link = $"https://sites.google.com/view/medios-de-pago-digitales/billetera-electr%C3%B3nica"; imagename = "4_Soluciones_NFC.jpg"; break;
-                case "Mobile POS": link = $"https://sites.google.com/view/medios-de-pago-digitales/mobile-pos"; imagename = "5_Mobile_POS.jpg"; break;
-                case "NFC POS": link = $"https://sites.google.com/view/medios-de-pago-digitales/nfc-pos"; imagename = "6_NFC_POS.jpg"; break;
-                case "IVR Billing": link = $"https://sites.google.com/view/medios-de-pago-digitales/ivr-billing"; imagename = "7_IVR_Billing.jpg"; break;
-                case "Carrier Billing": link = $"https://sites.google.com/view/medios-de-pago-digitales/carrier-billing"; imagename = "8_Carrier_Billing.jpg"; break;
-                case "Tecnologia cognitiva (Chatbot)": link = $"https://sites.google.com/view/medios-de-pago-digitales/tecnolog%C3%ADa-cognitiva"; imagename = "9_Tecnología cognitiva (Chatbot).jpg"; break;
-                case "Soluciones de social banking (Whatsapp)": link = $"https://sites.google.com/view/medios-de-pago-digitales/soluciones-social-banking"; imagename = "10_Soluciones de social banking (Whatsapp).jpg"; break;
-                case "Aplicaciones QR ( Revistas )": link = $"https://sites.google.com/view/medios-de-pago-digitales/aplicaci%C3%B3n-qr"; imagename = "11_Aplicaciones QR (Revistas).jpg"; break;
-                case "Beacons": link = $"https://sites.google.com/view/medios-de-pago-digitales/beacons"; imagename = "12_Beacons.jpg"; break;
-                case "Tarjetas de fidelizacion": link = $"https://sites.google.com/view/medios-de-pago-digitales/tarjetas-de-fidelizaci%C3%B3n"; imagename = "13_Tarjetas de fidelización.jpg"; break;
-                case "Tarjetas de descuentos": link = $"https://sites.google.com/view/medios-de-pago-digitales/tarjetas-de-descuentos"; imagename = "14_Tarjetas de descuentos.jpg"; break;
-                case "Giftcards": link = $"https://sites.google.com/view/medios-de-pago-digitales/giftcards"; imagename = "15_Giftcards.jpg"; break;
-                case "Dash Button": link = $"https://sites.google.com/view/medios-de-pago-digitales/dash-button"; imagename = "16_Dash Button.jpg"; break;
+                case "Botón de pago": link = "/TipoPago/BotondePago"; imagename = "1_Boton_de_pago.jpg"; break;
+                case "SMS Billing": link = "/TipoPago/SMSBilling"; imagename = "2_SMS_Billing.jpg"; break;
+                case "Aplicación QR(Venta por QR página web)": link = "/TipoPago/AplicacionQR"; imagename = "3_Aplicación QR (Venta por QR página web).jpg"; break;
+                case "Soluciones NFC (Mediante billetera electronica)": link = "/TipoPago/SolucionesNFC"; imagename = "4_Soluciones_NFC.jpg"; break;
+                case "Mobile POS": link = "/TipoPago/MobilePOS"; imagename = "5_Mobile_POS.jpg"; break;
+                case "NFC POS": link = "/TipoPago/NFCPOS"; imagename = "6_NFC_POS.jpg"; break;
+                case "IVR Billing": link="/TipoPago/IVRBilling"; imagename = "7_IVR_Billing.jpg"; break;
+                case "Carrier Billing": link = "/TipoPago/CarrierBilling"; imagename = "8_Carrier_Billing.jpg"; break;
+                case "Tecnologia cognitiva (Chatbot)": link = "/TipoPago/TencnologiaCognitivaChatbotFacebook"; imagename = "9_Tecnología cognitiva (Chatbot).jpg"; break;
+                case "Soluciones de social banking (Whatsapp)": link = "/TipoPago/SolucionesSocialBankingWhatsapp"; imagename = "10_Soluciones de social banking (Whatsapp).jpg"; break;
+                case "Aplicaciones QR ( Revistas )": link = "/TipoPago/BotondePago"; imagename = "11_Aplicaciones QR (Revistas).jpg"; break;
+                case "Beacons": link = "/TipoPago/Beacons"; imagename = "12_Beacons.jpg"; break;
+                case "Tarjetas de fidelizacion": link = "/TipoPago/TarjetasFidelizacion"; imagename = "13_Tarjetas de fidelización.jpg"; break;
+                case "Tarjetas de descuentos": link = "/TipoPago/TarjetasDescuento"; imagename = "14_Tarjetas de descuentos.jpg"; break;
+                case "Giftcards": link = "/TipoPago/Giftcards"; imagename = "15_Giftcards.jpg"; break;
+                case "Dash Button": link = "/TipoPago/DashButtons"; imagename = "16_Dash Button.jpg"; break;
             }
 
             builder = $"<div class=\"col-md-3 col-lg-3\" style=\"margin-top:80px\">" +

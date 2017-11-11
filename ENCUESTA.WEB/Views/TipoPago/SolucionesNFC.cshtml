@@ -1,0 +1,229 @@
+﻿
+@{
+    ViewBag.Title = "SolucionesNFC";
+    Layout = "~/Views/Shared/_LayoutTipoPago.cshtml";
+}
+
+<div class="section section-gray">
+    <div class="container">
+        <div class="main main-raised main-product">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="tab-content">
+                        <div class="tab-pane" id="product-page1">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/nfc1.jpg")" />
+                        </div>
+                        <div class="tab-pane active" id="product-page2">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/nfc2.jpg")" />
+                        </div>
+                        <div class="tab-pane" id="product-page3">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/nfc3.jpg")" />
+                        </div>
+                        <div class="tab-pane" id="product-page4">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/nfc4.jpg")" />
+                        </div>
+                    </div>
+                    <ul class="nav flexi-nav" role="tablist" id="flexiselDemo1">
+                        <li>
+                            <a href="#product-page1" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/nfc1.jpg")" />
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#product-page2" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/nfc2.jpg")" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-page3" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/nfc3.jpg")" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-page4" role="tab" data-toggle="tab" aria-expanded="true">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/nfc4.jpg")" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <h2 class="title"> Soluciones NFC (Billetera electrónica) </h2>
+                    <div id="acordeon">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            Descripción
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p>
+                                            una billetera móvil es una aplicación que permite utilizar un teléfono inteligente de la misma manera en que hoy usamos una billetera física para pagar y cobrar. Es una aplicación que permite recibir y realizar pagos como si se tratara de dinero en efectivo, mediante transacciones seguras desde el dispositivo móvil.
+                                            El NFC tiene muchos usos como herramienta tecnológica. Pero el que ha sobresalido en los últimos meses es su capacidad de convertir a un celular en una billetera móvil.
+                                            El mundo en desarrollo ha estado usando los celulares para pagar bienes y servicios en tiendas, taxis, y casi en cualquier lugar, gracias a la tecnología de micropagos de SMS o mensajes de texto.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            Formas de comunicación NFC
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+
+
+                                        <ul>
+                                            <li>Comunicación bidireccional: esto significa que ambos dispositivos se pueden leer y escribir entre sí. Por ejemplo, utilizando NFC, puedes rozar dos dispositivos Android para que se transfieran datos como lista de contactos, enlaces y fotos.</li>
+                                            <li>Comunicación de una dirección: un dispositivo con NFC (como un teléfono, un lector de tarjetas de crédito y tarjetas de autobús) lee y escribe a un chip NFC. Así que, cuando rozas tu tarjeta de autobús, por ejemplo, el terminal NFC le resta el dinero del saldo registrado.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            Requisitos
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>Creación de cuenta del proveedor de la billetera electrónica</li>
+                                            <li>Instalación de la aplicación de  billetera electrónica</li>
+                                            <li>Smartphone con NFC</li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--  end acordeon -->
+                </div>
+            </div>
+        </div>
+        <div class="features text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-info">
+                            <i class="material-icons">verified_user</i>
+                        </div>
+                        <h4 class="info-title">Beneficios </h4>
+                        <ul>
+                            <li>Protección de marcas. Con NFC la autentificación de productos resulta sencilla y fácil tanto para consumidores como para los propietarios de las marcas comerciales.</li>
+                            <li>Cupones electrónicos. Desde cualquier punto dónde esté su publicidad, el usuario podrá contactar con su marca y podrá ofrecerle promociones personalizadas.</li>
+                            <li>Móviles, Smartphones y Tabletas. No importa la plataforma ni el dispositivo NFC, ni desde dónde se desee controlar y gestionar sus tags. </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-success">
+                            <i class="material-icons">local_shipping</i>
+                        </div>
+                        <h4 class="info-title">Funcionamiento</h4>
+                        <div class="iframe-container">
+                            <iframe height="250" src="https://www.youtube.com/embed/NJ0OcR9FmHQ" frameborder="0" gesture="media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-rose">
+                            <i class="material-icons">verified_user</i>
+                        </div>
+                        <h4 class="info-title">Beneficios</h4>
+                        <ul>
+                            <li>Fidelización consumidor. Desde cualquier puento del lineal podrá interactuar con el consumidor, proporcionándole ofertas en tiempo real según grado de fidelización.</li>
+                            <li>Tracking de lecturas. La plataforma DataSuite le proporcionará información instantánea, cada vez que se produzca. Conocerá las interacciones y programar alertas.</li>
+                            <li>Multiplataforma</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related-products">
+            <h3 class="title text-center">Proveedores</h3>
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-product">
+                        <div class="card-image">
+                            <a href="https://www.samsung.com/us/samsung-pay/">
+                                <img class="img" src="@Url.Content("~/Content/assets/img/tipopago/pnfc1.jpg")" />
+                            </a>
+                        </div>
+                        <div class="card-content">
+
+                            <h4 class="card-title">
+                                <a href="https://www.samsung.com/us/samsung-pay/">Samsung Pay</a>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-product">
+                        <div class="card-image">
+                            <a href="https://mibim.pe/tu-billetera-movil/como-me-afilio/">
+                                <img class="img" src="@Url.Content("~/Content/assets/img/tipopago/pnfc2.jpg")" />
+                            </a>
+                        </div>
+                        <div class="card-content">
+
+                            <h4 class="card-title">
+                                <a href="https://mibim.pe/tu-billetera-movil/como-me-afilio/">BIM</a>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-product">
+                        <div class="card-image">
+                            <a href="https://www.bbvacontinental.pe/personas/canales/dinero-electronico/">
+                                <img class="img" src="@Url.Content("~/Content/assets/img/tipopago/pnfc3.jpg")" />
+                            </a>
+                        </div>
+                        <div class="card-content">
+
+                            <h4 class="card-title">
+                                <a href="https://www.bbvacontinental.pe/personas/canales/dinero-electronico/">BBVA</a>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-product">
+                        <div class="card-image">
+                            <a href="https://www.bcp.com.bo/personas/canales_de_atencion/billetera_movil">
+                                <img class="img" src="@Url.Content("~/Content/assets/img/tipopago/pnfc4.jpg")" />
+                            </a>
+                        </div>
+                        <div class="card-content">
+
+                            <h4 class="card-title">
+                                <a href="https://www.bcp.com.bo/personas/canales_de_atencion/billetera_movil">BCP</a>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

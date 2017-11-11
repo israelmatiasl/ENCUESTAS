@@ -1,0 +1,174 @@
+﻿
+@{
+    ViewBag.Title = "NFCPOS";
+    Layout = "~/Views/Shared/_LayoutTipoPago.cshtml";
+}
+
+<div class="section section-gray">
+    <div class="container">
+        <div class="main main-raised main-product">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="tab-content">
+                        <div class="tab-pane" id="product-page1">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/nfcpos1.jpg")" />
+                        </div>
+                        <div class="tab-pane active" id="product-page2">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/nfcpos2.jpg")" />
+                        </div>
+                        <div class="tab-pane" id="product-page3">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/nfcpos3.jpg")" />
+                        </div>
+                        <div class="tab-pane" id="product-page4">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/nfcpos4.jpg")" />
+                        </div>
+                    </div>
+                    <ul class="nav flexi-nav" role="tablist" id="flexiselDemo1">
+                        <li>
+                            <a href="#product-page1" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/nfcpos1.jpg")" />
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#product-page2" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/nfcpos2.jpg")" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-page3" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/nfcpos3.jpg")" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-page4" role="tab" data-toggle="tab" aria-expanded="true">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/nfcpos4.jpg")" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <h2 class="title"> NFC POS </h2>
+                    <div id="acordeon">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            Descripción
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p>Esta tecnología permite realizar pagos rápidos y seguros con solo aproximar el dispositivo contactless a unos pocos centímetros del equipo, sin tener que entregarla al cajero, deslizar la banda ni introducir el chip, finalizando la transacción con su clave PIN en tarjetas de débito o la firma del voucher en tarjetas de crédito.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            Dispositivo contactless
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Un sistema de pago contactless es aquel que permite pagar una compra mediante tecnologías de identificación por radiofrecuencia incorporadas en tarjetas de crédito o débito, llaveros, tarjetas inteligentes, teléfonos móviles u otros dispositivos.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            Requisitos
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>Dispositivo POS con tecnología NFC</li>
+                                            <li>Smartphone con NFC</li>
+                                            <li>Tarjeta con chip NFC</li>
+                                            <li>Otros dispositivos contactless</li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--  end acordeon -->
+                </div>
+            </div>
+        </div>
+        <div class="features text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-info">
+                            <i class="material-icons">verified_user</i>
+                        </div>
+                        <h4 class="info-title">Beneficios </h4>
+                        <ul>
+                            <li>Seguridad: control de la transacción sin entregar la tarjeta, lo cual evita la manipulación de la misma por terceros. </li>
+                            <li>Agilidad y rapidez en los pagos</li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-success">
+                            <i class="material-icons">local_shipping</i>
+                        </div>
+                        <h4 class="info-title">Funcionamiento</h4>
+                        <div class="iframe-container">
+                            <iframe height="250" src="https://www.youtube.com/embed/u7Xjzsqx-eQ" frameborder="0" gesture="media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-rose">
+                            <i class="material-icons">verified_user</i>
+                        </div>
+                        <h4 class="info-title">Beneficios</h4>
+                        <ul>
+                            <li>Comodidad: el usuario realiza el pago acercando su tarjeta a menos de 3 cm del POS.</li>
+                            <li>Tecnología de pago internacional</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related-products">
+            <h3 class="title text-center">Proveedores</h3>
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-product">
+                        <div class="card-image">
+                            <a href="https://www.visanet.com.pe/afiliatevisanet/visanet-pos.php">
+                                <img class="img" src="@Url.Content("~/Content/assets/img/tipopago/pnfcpos1.jpg")" />
+                            </a>
+                        </div>
+                        <div class="card-content">
+
+                            <h4 class="card-title">
+                                <a href="https://www.visanet.com.pe/afiliatevisanet/visanet-pos.php">VisaNet Perú</a>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

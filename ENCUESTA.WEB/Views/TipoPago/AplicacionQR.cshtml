@@ -1,0 +1,233 @@
+﻿
+@{
+    ViewBag.Title = "AplicacionQR";
+    Layout = "~/Views/Shared/_LayoutTipoPago.cshtml";
+}
+
+<div class="section section-gray">
+    <div class="container">
+        <div class="main main-raised main-product">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="tab-content">
+                        <div class="tab-pane" id="product-page1">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/appqr1.jpg")" />
+                        </div>
+                        <div class="tab-pane active" id="product-page2">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/appqr2.jpg")" />
+                        </div>
+                        <div class="tab-pane" id="product-page3">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/appqr3.jpg")" />
+                        </div>
+                        <div class="tab-pane" id="product-page4">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/appqr4.jpg")" />
+                        </div>
+                    </div>
+                    <ul class="nav flexi-nav" role="tablist" id="flexiselDemo1">
+                        <li>
+                            <a href="#product-page1" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/appqr1.jpg")" />
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#product-page2" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/appqr2.jpg")" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-page3" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/appqr3.jpg")" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-page4" role="tab" data-toggle="tab" aria-expanded="true">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/appqr4.jpg")" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <h2 class="title"> Aplicación QR </h2>
+                    <div id="acordeon">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            Descripción
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p>Los códigos QR (en inglés “Quick Response”, “respuesta rápida”) son códigos de barras bidimensionales, que fueron desarrollados por la compañía japonesa Denso Wave, en 1994. Respecto a los datos que puede manejar, te interesará saber que pueden contener hasta 4.200 caracteres alfanuméricos, es decir, letras, números y caracteres.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            ¿Cómo se lee el código QR?
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        La matriz de puntos en la que se guardan los datos no es legible para el ojo humano. Se debe leer con un teléfono móvil o con un dispositivo que disponga de la aplicación correspondiente (un lector de códigos QR). La lectura del código se lleva a cabo en cuestión de segundos. Además, gracias a la corrección de errores, la lectura también funciona si falta alguna pieza en el código.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            Códigos QR en revistas
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Muy a menudo los códigos QR aparecen en revistas y periódicos. Al escanearlos, el lector accede de una manera fácil y directa a determinados sitios web sin que sea necesario, por ejemplo, teclear direcciones URL largas y complejas.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            Requisitos
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>Instalación de Aplicación de creación de código QR</li>
+                                            <li>Cuenta con tu tarjeta de débito o crédito enlazada</li>
+                                            <li>Smartphone con cámara para la lectura de los códigos QR</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--  end acordeon -->
+                </div>
+            </div>
+        </div>
+        <div class="features text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-info">
+                            <i class="material-icons">verified_user</i>
+                        </div>
+                        <h4 class="info-title">Beneficios </h4>
+                        <ul>
+                            <li>Bajo coste: los códigos QR son una herramienta muy económica</li>
+                            <li>Amplia extensión y cobertura: se trata de un sistema que puede aplicarse a distintos medios y canales, logrando así gran visibilidad y cobertura.</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-success">
+                            <i class="material-icons">local_shipping</i>
+                        </div>
+                        <h4 class="info-title">Funcionamiento</h4>
+                        <div class="iframe-container">
+                            <iframe height="250" src="https://www.youtube.com/embed/Hyw4o5wKdUY" frameborder="0" gesture="media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-rose">
+                            <i class="material-icons">verified_user</i>
+                        </div>
+                        <h4 class="info-title">Beneficios</h4>
+                        <ul>
+                            <li>Base de datos: se trata de una herramienta que ayuda a generar bases de datos útiles para las estrategias de comunicación y marketing de la empresa</li>
+                            <li>Modernidad: la utilización de esta herramienta aporta a la empresa una imagen de modernidad y adaptación a las nuevas tecnologías</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related-products">
+            <h3 class="title text-center">Proveedores</h3>
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-product">
+                        <div class="card-image">
+                            <a href="https://www.zapper.com/">
+                                <img class="img" src="@Url.Content("~/Content/assets/img/tipopago/pappqr1.jpg")" />
+                            </a>
+                        </div>
+                        <div class="card-content">
+
+                            <h4 class="card-title">
+                                <a href="https://www.zapper.com/">Zapper</a>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-product">
+                        <div class="card-image">
+                            <a href="https://www.culqi.com/">
+                                <img class="img" src="@Url.Content("~/Content/assets/img/tipopago/pappqr2.jpg")" />
+                            </a>
+                        </div>
+                        <div class="card-content">
+
+                            <h4 class="card-title">
+                                <a href="https://www.culqi.com/">Culqi</a>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-product">
+                        <div class="card-image">
+                            <a href="https://www.paysafecard.com/es-es/productos/app/scan2pay/">
+                                <img class="img" src="@Url.Content("~/Content/assets/img/tipopago/pappqr3.jpg")" />
+                            </a>
+                        </div>
+                        <div class="card-content">
+
+                            <h4 class="card-title">
+                                <a href="https://www.paysafecard.com/es-es/productos/app/scan2pay/">Paysafecard</a>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-product">
+                        <div class="card-image">
+                            <a href="https://todopago.com.ar/pago-con-qr">
+                                <img class="img" src="@Url.Content("~/Content/assets/img/tipopago/pappqr4.jpg")" />
+                            </a>
+                        </div>
+                        <div class="card-content">
+
+                            <h4 class="card-title">
+                                <a href="https://todopago.com.ar/pago-con-qr">Todo Pago</a>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

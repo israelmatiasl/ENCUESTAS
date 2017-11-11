@@ -1,0 +1,202 @@
+﻿
+@{
+    ViewBag.Title = "CarrierBilling";
+    Layout = "~/Views/Shared/_LayoutTipoPago.cshtml";
+}
+
+<div class="section section-gray">
+    <div class="container">
+        <div class="main main-raised main-product">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="tab-content">
+                        <div class="tab-pane" id="product-page1">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/carrier1.jpg")" />
+                        </div>
+                        <div class="tab-pane active" id="product-page2">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/carrier2.jpg")" />
+                        </div>
+                        <div class="tab-pane" id="product-page3">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/carrier3.jpg")" />
+                        </div>
+                        <div class="tab-pane" id="product-page4">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/carrier4.jpg")" />
+                        </div>
+                    </div>
+                    <ul class="nav flexi-nav" role="tablist" id="flexiselDemo1">
+                        <li>
+                            <a href="#product-page1" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/carrier1.jpg")" />
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#product-page2" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/carrier2.jpg")" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-page3" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/carrier3.jpg")" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-page4" role="tab" data-toggle="tab" aria-expanded="true">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/carrier4.jpg")" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <h2 class="title"> Carrier Billing </h2>
+                    <div id="acordeon">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            Descripción
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p>El carrier billing, también conocido como direct operator billing, es un método de pago a través del móvil que permite a los usuarios hacer compras a través de su operador de telefonía móvil(Movistar, Vodafone, Orange, etc.), bien agregando su coste directamente a la factura, bien descontándolo del saldo de su tarjeta prepago. El operador móvil cobra una comisión al proveedor del servicio por su labor como intermediario en el pago, al igual que los bancos cobran una comisión a los comercios que utilizan el TPV para cobrar a sus clientes.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            Pasos del funcionamiento
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>El usuario elige lo que desea comprar y procede a pagarlo a través de su terminal móvil, siendo indiferente si dispone de servicios de prepago o de una tarifa contractual.</li>
+                                            <li>Posteriormente, es bastante usual que se requiera al usuario de confirmación de la cantidad a pagar, normalmente validando el número de teléfono o, en algún caso, insertando también una credencial para evitar así cargos no deseados por pérdida o robo del dispositivo móvil.</li>
+                                            <li>
+                                                Inmediatamente, se realiza el cobro del contenido con cargo a la factura telefónica o al saldo de la tarjeta de prepago.
+                                                Vamos a analizar brevemente los antecedentes de esta operativa, su encaje en la normativa sobre servicios de pago, sus diferencias respecto del mobile wallet y el futuro que se puede augurar a este mercado.
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--  end acordeon -->
+                </div>
+            </div>
+        </div>
+        <div class="features text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-info">
+                            <i class="material-icons">verified_user</i>
+                        </div>
+                        <h4 class="info-title">Beneficios </h4>
+                        ul>
+                        <li>Seguridad: es lo primero que valoran los usuarios de móvil e Internet a la hora de realizar pagos. El hecho de no tener que dar su número de cuenta o tarjeta al proveedor o a un intermediario es la principal ventaja de los operadores de telefonía respecto del resto de competidores.</li>
+                        <li>Amplitud: permite realizar pagos a usuarios que no disponen de tarjeta de crédito, lo que supone una gran ventaja en regiones donde existe un bajo índice de bancarización</li>
+                        <li>
+                            Conectividad: los usuarios del carrier billing tienen una probabilidad cinco veces mayor que los usan una tarjeta de crédito para realizar sus compras de completar una compra en la App Shop que corresponda.
+                        </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-success">
+                            <i class="material-icons">local_shipping</i>
+                        </div>
+                        <h4 class="info-title">Funcionamiento</h4>
+                        <div class="iframe-container">
+                            <iframe height="250" src="https://www.youtube.com/embed/FuXwStlHPm4" frameborder="0" gesture="media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-rose">
+                            <i class="material-icons">verified_user</i>
+                        </div>
+                        <h4 class="info-title">Beneficios</h4>
+                        ul>
+                        <li>Sencillez: no se requiere la identificación personal pues la operadora ya dispone de los datos del usuario.</li>
+                        <li>Rapidez: el pago es prácticamente instantáneo.</li>
+                        <li>
+                            Tamaño del mercado: el creciente número de usuarios de Internet en los mercados emergentes contribuye al aumento de las oportunidades de ingresos para los operadores móviles.
+                        </li>
+                        <li>
+                            Flexibilidad de la facturación: este canal de pago es óptimo, tanto para compras puntuales de artículos de bajo coste, como para suscripciones a largo plazo a servicios de contenido de alto valor.
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related-products">
+            <h3 class="title text-center">Proveedores</h3>
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-product">
+                        <div class="card-image">
+                            <a href="https://fortumo.com/coverage/#peru/">
+                                <img class="img" src="@Url.Content("~/Content/assets/img/tipopago/pcarrier1.jpg")" />
+                            </a>
+                        </div>
+                        <div class="card-content">
+
+                            <h4 class="card-title">
+                                <a href="https://fortumo.com/coverage/#peru">Fortumo</a>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-product">
+                        <div class="card-image">
+                            <a href="https://www.mococheck.com/services/test-direct-carrier-billing/">
+                                <img class="img" src="@Url.Content("~/Content/assets/img/tipopago/pcarrier2.jpg")" />
+                            </a>
+                        </div>
+                        <div class="card-content">
+
+                            <h4 class="card-title">
+                                <a href="https://www.mococheck.com/services/test-direct-carrier-billing/">Mococheck</a>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-product">
+                        <div class="card-image">
+                            <a href="http://www.hipaymobile.es/45/hipay-mobile-lider-del-micropago-pago-movil">
+                                <img class="img" src="@Url.Content("~/Content/assets/img/tipopago/pcarrier3.jpg")" />
+                            </a>
+                        </div>
+                        <div class="card-content">
+
+                            <h4 class="card-title">
+                                <a href="http://www.hipaymobile.es/45/hipay-mobile-lider-del-micropago-pago-movil">hipaymobile</a>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

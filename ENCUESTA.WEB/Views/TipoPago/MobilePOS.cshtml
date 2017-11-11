@@ -1,0 +1,186 @@
+﻿
+@{
+    ViewBag.Title = "MobilePOS";
+    Layout = "~/Views/Shared/_LayoutTipoPago.cshtml";
+}
+
+<div class="section section-gray">
+    <div class="container">
+        <div class="main main-raised main-product">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="tab-content">
+                        <div class="tab-pane" id="product-page1">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/mpos1.jpg")" />
+                        </div>
+                        <div class="tab-pane active" id="product-page2">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/mpos2.jpg")" />
+                        </div>
+                        <div class="tab-pane" id="product-page3">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/mpos3.jpg")" />
+                        </div>
+                        <div class="tab-pane" id="product-page4">
+                            <img src="@Url.Content("~/Content/assets/img/tipopago/mpos4.jpg")" />
+                        </div>
+                    </div>
+                    <ul class="nav flexi-nav" role="tablist" id="flexiselDemo1">
+                        <li>
+                            <a href="#product-page1" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/mpos1.jpg")" />
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#product-page2" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/mpos2.jpg")" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-page3" role="tab" data-toggle="tab" aria-expanded="false">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/mpos3.jpg")" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-page4" role="tab" data-toggle="tab" aria-expanded="true">
+                                <img src="@Url.Content("~/Content/assets/img/tipopago/mpos4.jpg")" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <h2 class="title"> Mobile POS </h2>
+                    <div id="acordeon">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            Descripción
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p>
+                                            La implementación de tecnologías conocidas como Mobile POS (Point of Sale) permiten a cualquier tipo de negocio llevar a cabo transacciones en el sitio donde se requieran. Esto mejora la experiencia del cliente en el lugar y libera espacio físico que se destina siempre al sistema tradicional POS.
+                                            Este tecnología  Mobile POS también resulta rentable para los propietarios de los negocios ya que permite hacer transacciones sin tener que invertir en un registro electrónico o pagar a un proveedor externo la instalación y configuración de un software específico para realizar pagos en las registradoras.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            ¿Cómo contratar este servicio?
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Cualquier smartphone o tableta puede transformarse en un mobile POS, descargando una aplicación de un proveedor específico.
+                                        Al registrar la aplicación, el proveedor envía al dueño del negocio un lector de tarjetas para conectar al dispositivo móvil.
+                                        Dependiendo del softare:
+                                        <ul>
+                                            <li>Puede funcionar como un dispositivo independiente ligado a la cuenta bancaria del negocio</li>
+                                            <li>Puede ser derivado integral de un sistema POS más grande en el establecimiento</li>
+
+                                        </ul>
+                                        Para proteger los datos de titulares de tarjetas, estos se encriptan y son almacenados en la nube y no en el dispositivo.
+                                        Se paga una comisión por cada transacción registrada(esto dependerá del proveedor)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-border panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-controls="collapseOne">
+                                        <h4 class="panel-title">
+                                            Requisitos
+                                            <i class="material-icons">keyboard_arrow_down</i>
+                                        </h4>
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>Dispositivo Smartphone</li>
+                                            <li>Aplicación del proveedor relacionado al mobile pos</li>
+                                            <li>Lector de tarjetas</li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--  end acordeon -->
+                </div>
+            </div>
+        </div>
+        <div class="features text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-info">
+                            <i class="material-icons">verified_user</i>
+                        </div>
+                        <h4 class="info-title">Beneficios </h4>
+                        <ul>
+                            <li>Recepción de pagos electrónicos en cualquier momento y lugar</li>
+                            <li>Disponibilidad de servicio las 24 horas de día/ 365 días al año</li>
+                            <li>Tecnología adaptable a cualquier tipo de negocio (Tiendas o comercios pequeños, restaurantes, servicios a domicilio, talleres mecánicos)</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-success">
+                            <i class="material-icons">local_shipping</i>
+                        </div>
+                        <h4 class="info-title">Funcionamiento</h4>
+                        <div class="iframe-container">
+                            <iframe height="250" src="https://www.youtube.com/embed/BlLi6mjwvu4" frameborder="0" gesture="media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info">
+                        <div class="icon icon-rose">
+                            <i class="material-icons">verified_user</i>
+                        </div>
+                        <h4 class="info-title">Beneficios</h4>
+                        <ul>
+                            <li>Seguridad y control en todas las ventas que el comercio realice</li>
+                            <li>Monitoreo de ventas diarias o mensuales por mkedio de un sistema web</li>
+                            <li>Mejorar la experiencia de compra de los clientes</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related-products">
+            <h3 class="title text-center">Proveedores</h3>
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-product">
+                        <div class="card-image">
+                            <a href="https://www.visanet.com.pe/afiliatevisanet/?gclid=Cj0KCQiA84rQBRDCARIsAPO8RFw2AxA0m4E6VCS4aFj5Heh_2nWGzDKwlU6sM4RtTs2Cp4hECRBAUmAaAvyCEALw_wcB">
+                                <img class="img" src="@Url.Content("~/Content/assets/img/tipopago/pmpos1.jpg")" />
+                            </a>
+                        </div>
+                        <div class="card-content">
+
+                            <h4 class="card-title">
+                                <a href="https://www.visanet.com.pe/afiliatevisanet/?gclid=Cj0KCQiA84rQBRDCARIsAPO8RFw2AxA0m4E6VCS4aFj5Heh_2nWGzDKwlU6sM4RtTs2Cp4hECRBAUmAaAvyCEALw_wcB">Pocket POS</a>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
